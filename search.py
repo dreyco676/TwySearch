@@ -1,5 +1,8 @@
+import user
+
+
 class TwitterSearch:
-    def __init__(self, keywords, params, auth):
+    def __init__(self, keywords, params, session_auth):
         self.keywords = keywords
         self.params = params
-        self.auth = auth
+        self.session_auth = user.TwitterUser
