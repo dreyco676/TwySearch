@@ -35,8 +35,6 @@ class TwitterRequest:
 
         return param_list
 
-    def page_results(self, max_results):
-
     def make_request(self):
         if self.search_params.max_results > 100:
             while self.search_params.max_results > 100:
