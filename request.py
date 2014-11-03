@@ -1,9 +1,7 @@
-import twython
-import search
 import time
 import sys
 
-class TwitterRequest:
+class TwitterRequest(object):
     def __init__(self):
         #twitter documentation
         #https://dev.twitter.com/rest/reference/get/search/tweets
@@ -39,35 +37,38 @@ class TwitterRequest:
 
     def make_request(self):
         #read in all the parameters for the API call
-        api_url = 'https://api.twitter.com/1.1/search/tweets.json'
-        #
         try:
             if self._req_param._keyword is None:
-                raise Exception("Keyword Parameter cannot be None!")
+                raise Exception("'q' Parameter cannot be None!")
             else:
                 q = self._req_param._keyword
         except:
-            raise Exception("Keyword Parameter not defined!")
+            raise Exception("'q' Parameter not defined!")
         try:
             geocode = self._req_param._geocode
         except:
-            geocode = None
+            raise Exception("'geocode' Parameter not defined!")
         try:
             lang = self._req_param._lang
         except:
-            lang = None
+            raise Exception("'lang' Parameter not defined!")
         try:
             result_type = self._req_param._result_type
         except:
-            result_type = None
+            raise Exception("'result_type' Parameter not defined!")
         try:
-            count = self._req_param._max_results
+            if self._req_param._max_results is None:
+                #twitter default is 15
+                count = 15
+            elif self._req_param._max_results > 100:
+                count = self._req_param._max_results
+                print("WARNING: will induce multiple requests!")
         except:
-            count = None
+            raise Exception("'count' Parameter not defined!")
         try:
             until = self._req_param._max_date
         except:
-            until = None
+            raise Exception("'until' Parameter not defined!")
 
         #for paging read tweets older than max_id
         max_id = None
@@ -75,7 +76,7 @@ class TwitterRequest:
             data = {}
             while count > 100:
                 start_time = time()
-                request = self._session_auth.search(api_url, q=q, geocode=geocode, lang=lang,
+                request = self._session_auth.search(q=q, geocode=geocode, lang=lang,
                                     result_type=result_type, count=100, until=until, max_id=max_id)
 
                 #read the results to get the last id and pass as max_id
@@ -95,7 +96,10 @@ class TwitterRequest:
                 time.sleep(5 - elapsed_time)
         else:
             #make request
-            request = self._session_auth.search(api_url, q=q, geocode=geocode, lang=lang,
-                                result_type=result_type, until=until)
+            request = self._session_auth.search(q=q, geocode=geocode, lang=lang,
+                                result_type=result_type, count=count, until=until)
             data = request["statuses"]
             return data
+
+    def estimate_time(self):
+        print("time estimate placeholder")

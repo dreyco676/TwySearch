@@ -1,6 +1,6 @@
-import twython
+import request
 
-class TwitterSearch:
+class TwitterSearch(object):
     def __init__(self):
         self._keyword = None
         self._geocode = None
