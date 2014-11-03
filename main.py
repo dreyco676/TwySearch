@@ -11,10 +11,12 @@ twitter_auth = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
 search = TwitterSearch()
 search.keyword ='Python'
+search.max_results = 105
 
 req = TwitterRequest()
 req._req_param = search
 req._session_auth = twitter_auth
 data = req.make_request()
 
+print(len(data["statuses"]))
 print(data)
