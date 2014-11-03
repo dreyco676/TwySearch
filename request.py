@@ -1,5 +1,6 @@
 import time
 import sys
+import datetime
 
 class TwitterRequest(object):
     def __init__(self):
@@ -60,7 +61,9 @@ class TwitterRequest(object):
             if self._req_param._max_results is None:
                 #twitter default is 15
                 count = 15
-            elif self._req_param._max_results > 100:
+            elif self._req_param._max_results <= 100:
+                count = self._req_param._max_results
+            else:
                 count = self._req_param._max_results
                 print("WARNING: will induce multiple requests!")
         except:
@@ -72,12 +75,18 @@ class TwitterRequest(object):
 
         #for paging read tweets older than max_id
         max_id = None
+        data = {}
         if count > 100:
-            data = {}
             while count > 100:
-                start_time = time()
+                start_time = datetime.datetime.now()
                 request = self._session_auth.search(q=q, geocode=geocode, lang=lang,
                                     result_type=result_type, count=100, until=until, max_id=max_id)
+
+                #add request results to output
+                if max_id is None:
+                    data = request["statuses"]
+                else:
+                    data.extend(request["statuses"])
 
                 #read the results to get the last id and pass as max_id
                 count_returned = request["search_metadata"]["count"]
@@ -87,19 +96,22 @@ class TwitterRequest(object):
                 if count_returned == 0:
                     count_returned = sys.maxint
                 count -= count_returned
-                elapsed_time = time() - start_time
 
-                #add request results to output
-                data.update(request["statuses"])
                 #Rate Handling
                 #twitter rate limits at 180/15min = 1/5sec
-                time.sleep(5 - elapsed_time)
-        else:
-            #make request
-            request = self._session_auth.search(q=q, geocode=geocode, lang=lang,
-                                result_type=result_type, count=count, until=until)
+                end_time = datetime.datetime.now()
+                elapsed_sec = (end_time - start_time).total_seconds()
+                time.sleep(5 - elapsed_sec)
+
+        #make final request
+        request = self._session_auth.search(q=q, geocode=geocode, lang=lang,
+                                result_type=result_type, count=count, until=until, max_id=max_id)
+        #add request results to output
+        if max_id is None:
             data = request["statuses"]
-            return data
+        else:
+            data.extend(request["statuses"])
+        return data
 
     def estimate_time(self):
         print("time estimate placeholder")
