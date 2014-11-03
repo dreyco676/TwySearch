@@ -72,6 +72,7 @@ class TwitterRequest:
         #for paging read tweets older than max_id
         max_id = None
         if count > 100:
+            data = {}
             while count > 100:
                 start_time = time()
                 request = self._session_auth.search(api_url, q=q, geocode=geocode, lang=lang,
@@ -87,6 +88,8 @@ class TwitterRequest:
                 count -= count_returned
                 elapsed_time = time() - start_time
 
+                #add request results to output
+                data.update(request["statuses"])
                 #Rate Handling
                 #twitter rate limits at 180/15min = 1/5sec
                 time.sleep(5 - elapsed_time)
@@ -94,4 +97,5 @@ class TwitterRequest:
             #make request
             request = self._session_auth.search(api_url, q=q, geocode=geocode, lang=lang,
                                 result_type=result_type, until=until)
-            return request
+            data = request["statuses"]
+            return data
