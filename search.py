@@ -5,6 +5,7 @@ class TwitterSearch:
         self._keyword = None
         self._geocode = None
         self._lang = None
+        self._result_type = None
         self._max_results = None
         self._max_date = None
         #twitter documentation
@@ -48,6 +49,19 @@ class TwitterSearch:
     @lang.deleter
     def lang(self):
         del self._lang
+
+    #RESULT_TYPE
+    @property
+    def result_type(self):
+        return self._result_type
+
+    @result_type.setter
+    def result_type(self,value):
+        self._result_type = value
+
+    @result_type.deleter
+    def result_type(self):
+        del self._result_type
 
     #MAX_RESULTS
     @property
