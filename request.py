@@ -77,9 +77,9 @@ class TwitterRequest:
                 request = self._session_auth.search(api_url, q=q, geocode=geocode, lang=lang,
                                     result_type=result_type, count=100, until=until, max_id=max_id)
 
-                #read the json results to get the last id and pass as starting id
-                count_returned = len(request["statuses"])
-                max_id = request["statuses"][count_returned - 1]["id"]
+                #read the results to get the last id and pass as max_id
+                count_returned = request["search_metadata"]["count"]
+                max_id = request["search_metadata"]["max_id"]
 
                 #if no more tweets break out of loop
                 if count_returned == 0:
