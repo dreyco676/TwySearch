@@ -1,5 +1,7 @@
 import twython
 import search
+import time
+import sys
 
 class TwitterRequest:
     def __init__(self):
@@ -34,7 +36,9 @@ class TwitterRequest:
     def session_auth(self):
         del self._session_auth
 
+
     def make_request(self):
+        #read in all the parameters for the API call
         api_url = 'https://api.twitter.com/1.1/search/tweets.json'
         #
         try:
@@ -65,10 +69,29 @@ class TwitterRequest:
         except:
             until = None
 
+        #for paging read tweets older than max_id
+        max_id = None
         if count > 100:
             while count > 100:
-                constructed_url = self.session_auth.construct_api_url(api_url, q=q, geocode=geocode, lang=lang,
-                                                            result_type=result_type, count=100, until=until)
+                start_time = time()
+                request = self._session_auth.search(api_url, q=q, geocode=geocode, lang=lang,
+                                    result_type=result_type, count=100, until=until, max_id=max_id)
+
+                #read the json results to get the last id and pass as starting id
+                count_returned = len(request["statuses"])
+                max_id = request["statuses"][count_returned - 1]["id"]
+
+                #if no more tweets break out of loop
+                if count_returned == 0:
+                    count_returned = sys.maxint
+                count -= count_returned
+                elapsed_time = time() - start_time
+
+                #Rate Handling
+                #twitter rate limits at 180/15min = 1/5sec
+                time.sleep(5 - elapsed_time)
         else:
             #make request
-            twython.search(self.search_params)
+            request = self._session_auth.search(api_url, q=q, geocode=geocode, lang=lang,
+                                result_type=result_type, until=until)
+            return request
