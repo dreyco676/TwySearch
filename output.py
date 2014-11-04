@@ -1,11 +1,24 @@
-class transform:
-    def __init__(self,data, trans_type):
-        self.data = data
-        self.trans_type = trans_type
+class FormatOutput(object):
+    def __init__(self):
+        #twitter documentation
+        #https://dev.twitter.com/rest/reference/get/search/tweets
+        self._result_set = None
 
-class output:
-    def __init__(self,data,file_type,filename,out_dir):
-        self.data = data
-        self.file_type = file_type
-        self.filename = filename
-        self.out_dir = out_dir
+    #RESULT_SET
+    @property
+    def result_set(self):
+        return self._result_set
+
+    @result_set.setter
+    def result_set(self,value):
+        self._result_set = value
+
+    @result_set.deleter
+    def result_set(self):
+        del self._result_set
+
+    def save_json_file(self, out_dir, file_name):
+        #do stuff
+
+    def save_delimited_file(self, out_dir, file_name, delimiter):
+        #do stuff
