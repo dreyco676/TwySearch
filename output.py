@@ -1,4 +1,4 @@
-import simplejson
+import json
 
 class FormatOutput(object):
     def __init__(self):
@@ -6,7 +6,7 @@ class FormatOutput(object):
         #https://dev.twitter.com/rest/reference/get/search/tweets
         self._out_dir = ''
         self._file_name = 'output'
-        self._out_type = 'json'
+        self.delimiter = 'json'
         self._result_set = None
 
     #RESULT_SET
@@ -62,10 +62,17 @@ class FormatOutput(object):
         del self._out_type
 
     def json_output(self):
-        name = self._out_dir + self._file_name + "." + self._out_type
+        if self._out_type is not None:
+            print('Output type should be None for this fuction')
+        name = self._out_dir + self._file_name + ".json"
         f = open(name, "w")
-        simplejson.dump(self._result_set, f)
+        json.dump(self._result_set, f)
         f.close()
 
     def csv_output(self):
-        print('#do stuff')
+        if self._out_type not in ['csv', 'tsv']:
+            print("Output type should be 'tsv' or 'csv' for this fuction")
+        name = self._out_dir + self._file_name + "." + self._out_type
+        f = open(name, "w")
+        json.dump(self._result_set, f)
+        f.close()
