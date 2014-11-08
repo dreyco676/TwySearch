@@ -20,7 +20,7 @@ class FormatOutput(object):
     def save_json_file(self, out_dir, file_name):
         fileName = out_dir + file_name + ".json"
         f = open(fileName, "wb")
-        f.write(self.raw_data)
+        f.write(self._result_set)
         f.close()
 
     def save_delimited_file(self, out_dir, file_name, delimiter):
