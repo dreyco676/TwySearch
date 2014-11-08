@@ -1,10 +1,12 @@
+import simplejson
+
 class FormatOutput(object):
     def __init__(self):
         #twitter documentation
         #https://dev.twitter.com/rest/reference/get/search/tweets
-        self._out_dir = None
-        self._file_name = None
-        self._out_type = None
+        self._out_dir = ''
+        self._file_name = 'output'
+        self._out_type = 'json'
         self._result_set = None
 
     #RESULT_SET
@@ -59,11 +61,11 @@ class FormatOutput(object):
     def out_type(self):
         del self._out_type
 
-    def save_json_file(self):
+    def json_output(self):
         name = self._out_dir + self._file_name + "." + self._out_type
-        f = open(name, "wb")
-        f.write(self._result_set)
+        f = open(name, "w")
+        simplejson.dump(self._result_set, f)
         f.close()
 
-    def save_csv_file(self):
+    def csv_output(self):
         print('#do stuff')
