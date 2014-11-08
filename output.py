@@ -18,7 +18,10 @@ class FormatOutput(object):
         del self._result_set
 
     def save_json_file(self, out_dir, file_name):
-        #do stuff
+        fileName = out_dir + file_name + ".json"
+        f = open(fileName, "wb")
+        f.write(self.raw_data)
+        f.close()
 
     def save_delimited_file(self, out_dir, file_name, delimiter):
         #do stuff
