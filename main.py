@@ -1,22 +1,28 @@
-import search
-import user
+from search import TwitterSearch
+from twython import Twython
+from request import TwitterRequest
+from output import FormatOutput
+import json
+
+APP_KEY = '37ZrxAQkWjZi5Mj7euFk0fT2e'
+APP_SECRET = 'Bo5duJpMC3iLHeZuOKyIkZJsOoLcnXbnCfURsrawCZPIp908t3'
+OAUTH_TOKEN = '39855951-6MtVemzUgai6hQRMOhNVldha8Fa8nAQoNmfmZYqII'
+OAUTH_TOKEN_SECRET = '6I3GlIJ1o4T0DB634KcQRQYghreLkv3jGmeZLIV3Amw68'
+twitter_auth = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
 
-keywords ='polly'
-geocode ='US'
-lang = 'English'
-max_results = 100
-max_date = None
+search = TwitterSearch()
+search.keyword ='Python'
+search.max_results = 5
 
-s = search.TwitterSearch(keywords, geocode, lang, max_results, max_date)
+req = TwitterRequest()
+req._req_param = search
+req._session_auth = twitter_auth
+data = req.make_request()
 
-name = 'John Hogue'
-company = 'General Mills'
-app_key = '37ZrxAQkWjZi5Mj7euFk0fT2e'
-app_secret = 'Bo5duJpMC3iLHeZuOKyIkZJsOoLcnXbnCfURsrawCZPIp908t3'
-oauth_token = '39855951-6MtVemzUgai6hQRMOhNVldha8Fa8nAQoNmfmZYqII'
-oauth_token_secret = '6I3GlIJ1o4T0DB634KcQRQYghreLkv3jGmeZLIV3Amw68'
+# save = FormatOutput()
+# save._file_name = 'Output'
+# save._out_type = 'json'
+# save._result_set = data
+# save.json_output()
 
-a = user.TwitterUser(name, company, app_key, app_secret, oauth_token, oauth_token_secret)
-
-r = search.TwitterRequest(s.get_search_params(),a.get_auth())

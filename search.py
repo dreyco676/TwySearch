@@ -1,32 +1,90 @@
-import twython
+import request
 
-class TwitterSearch:
-    def __init__(self, keywords, geocode, lang, max_results, max_date):
+class TwitterSearch(object):
+    def __init__(self):
+        self._keyword = None
+        self._geocode = None
+        self._lang = None
+        self._result_type = None
+        self._max_results = None
+        self._max_date = None
         #twitter documentation
         #https://dev.twitter.com/rest/reference/get/search/tweets
-        self.keywords = keywords
-        self.geocode = geocode
-        self.lang = lang
-        self.max_results = max_results
-        self.max_date = max_date
 
-    def get_search_params(self):
-        search_params = {'keywords': self.keywords, 'geocode': self.geocode,
-                         'lang':self.lang, 'max_results': self.max_results, 'max_date':self.max_date}
-        return search_params
+    #KEYWORD
+    @property
+    def keyword(self):
+        return self._keyword
 
-class TwitterRequest:
-    def __init__(self, search_params, session_auth):
-        #twitter documentation
-        #https://dev.twitter.com/rest/reference/get/search/tweets
-        self.search_params = search_params
-        self.session_auth = session_auth
+    @keyword.setter
+    def keyword(self,value):
+        self._keyword = value
 
-    def page_results(self, max_results):
+    @keyword.deleter
+    def keyword(self):
+        del self._keyword
 
-    def make_request(self):
-        if self.search_params.max_results > 100:
-            page_results(self.search_params.max_results)
-            #do stuff to page
+    #GEOCODE
+    @property
+    def geocode(self):
+        return self._geocode
 
+    @geocode.setter
+    def geocode(self,value):
+        self._geocode = value
 
+    @geocode.deleter
+    def geocode(self):
+        del self._geocode
+
+    #LANG
+    @property
+    def lang(self):
+        return self._lang
+
+    @lang.setter
+    def lang(self,value):
+        self._lang = value
+
+    @lang.deleter
+    def lang(self):
+        del self._lang
+
+    #RESULT_TYPE
+    @property
+    def result_type(self):
+        return self._result_type
+
+    @result_type.setter
+    def result_type(self,value):
+        self._result_type = value
+
+    @result_type.deleter
+    def result_type(self):
+        del self._result_type
+
+    #MAX_RESULTS
+    @property
+    def max_results(self):
+        return self._max_results
+
+    @max_results.setter
+    def max_results(self,value):
+        self._max_results = value
+
+    @max_results.deleter
+    def max_results(self):
+        del self._max_results
+
+    #MAX_DATE
+    @property
+    def max_date(self):
+        return self._max_date
+
+    @max_date.setter
+    def max_date(self,value):
+        self._max_date = value
+
+    @max_date.deleter
+    def max_date(self):
+        del self._max_date
