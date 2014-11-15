@@ -2,6 +2,7 @@ from search import TwitterSearch
 from twython import Twython
 from request import TwitterRequest
 from output import FormatOutput
+import json
 
 APP_KEY = '37ZrxAQkWjZi5Mj7euFk0fT2e'
 APP_SECRET = 'Bo5duJpMC3iLHeZuOKyIkZJsOoLcnXbnCfURsrawCZPIp908t3'
@@ -19,8 +20,9 @@ req._req_param = search
 req._session_auth = twitter_auth
 data = req.make_request()
 
-save = FormatOutput()
-save._file_name = 'Output'
-save._out_type = 'json'
-save._result_set = data
-save.json_output()
+# save = FormatOutput()
+# save._file_name = 'Output'
+# save._out_type = 'json'
+# save._result_set = data
+# save.json_output()
+
