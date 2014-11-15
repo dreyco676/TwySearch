@@ -31,7 +31,8 @@ class Application (Frame):
         # self.download_button.grid(row=2, column=2, sticky=W)
 
     def reveal(self):
-       print("TODO")
+        print("todo")
+                #search
         #self.text.insert(0.0,output)
 
 #def download
