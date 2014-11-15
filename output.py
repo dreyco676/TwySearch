@@ -62,8 +62,8 @@ class FormatOutput(object):
         del self._out_type
 
     def json_output(self):
-        if self._out_type is not None:
-            print('Output type should be None for this fuction')
+        if self._out_type != 'json':
+            print('Output type should be json for this fuction')
         name = self._out_dir + self._file_name + ".json"
         f = open(name, "w")
         json.dump(self._result_set, f)
@@ -79,8 +79,8 @@ class FormatOutput(object):
 
 
         name = self._out_dir + self._file_name + "." + self._out_type
-        f = open(name, "w")
-        json.dump(self._result_set, f)
+        f = open(name, "w+")
+        json.dump(self._result_set, f, indent=4)
         f.close()
 
     def create_header(attrib_list):
@@ -90,10 +90,6 @@ class FormatOutput(object):
             header_list.extend['coordinates']
         if attrib_list.favorites_attrib:
             header_list.extend['favorites']
-        if attrib_list.truncated_attrib:
-            header_list.extend['truncated']
-        if attrib_list.created_at_attrib:
-            header_list.extend['created_at']
         if attrib_list.id_str_attrib:
             header_list.extend['id_str']
         if attrib_list.entities_urls_attrib:
