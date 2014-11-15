@@ -10,4 +10,4 @@ twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 
 request = twitter.search(q='python', result_type='Popular', geocode=None, count=100)
 
-print(request["statuses"])
+print(len(request["statuses"]))

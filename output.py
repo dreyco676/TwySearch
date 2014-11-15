@@ -69,10 +69,41 @@ class FormatOutput(object):
         json.dump(self._result_set, f)
         f.close()
 
-    def csv_output(self):
+    def csv_output(self,attrib_list):
         if self._out_type not in ['csv', 'tsv']:
             print("Output type should be 'tsv' or 'csv' for this fuction")
+        #create headers
+        header_list =[]
+        if attrib_list.coordinates_attrib:
+            header_list.extend['coordinates']
+
+
         name = self._out_dir + self._file_name + "." + self._out_type
         f = open(name, "w")
         json.dump(self._result_set, f)
         f.close()
+
+    def create_header(attrib_list):
+        #create headers
+        header_list =[]
+        if attrib_list.coordinates_attrib:
+            header_list.extend['coordinates']
+        if attrib_list.favorites_attrib:
+            header_list.extend['favorites']
+        if attrib_list.truncated_attrib:
+            header_list.extend['truncated']
+        if attrib_list.created_at_attrib:
+            header_list.extend['created_at']
+        if attrib_list.id_str_attrib:
+            header_list.extend['id_str']
+        if attrib_list.entities_urls_attrib:
+            header_list.extend['entities_urls']
+        if attrib_list.entities_hashtags_attrib:
+            header_list.extend['entities_hashtags']
+        if attrib_list.entities_user_mentions_attrib:
+            header_list.extend['entities_user_mentions']
+        if attrib_list.coordinates_attrib:
+            header_list.extend['in_reply_to_user_id']
+
+    def flatten (data, prefix = None):
+        print("to-do")
