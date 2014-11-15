@@ -1,4 +1,6 @@
 import json
+import csv
+import re
 
 class FormatOutput(object):
     def __init__(self):
@@ -62,44 +64,72 @@ class FormatOutput(object):
         del self._out_type
 
     def json_output(self):
-        if self._out_type != 'json':
-            print('Output type should be json for this fuction')
-        name = self._out_dir + self._file_name + ".json"
-        f = open(name, "w")
-        json.dump(self._result_set, f)
-        f.close()
-
-    def csv_output(self,attrib_list):
-        if self._out_type not in ['csv', 'tsv']:
-            print("Output type should be 'tsv' or 'csv' for this fuction")
-        #create headers
-        header_list =[]
-        if attrib_list.coordinates_attrib:
-            header_list.extend['coordinates']
-
-
         name = self._out_dir + self._file_name + "." + self._out_type
-        f = open(name, "w+")
+        f = open(name, "w")
         json.dump(self._result_set, f, indent=4)
         f.close()
 
-    def create_header(attrib_list):
-        #create headers
-        header_list =[]
-        if attrib_list.coordinates_attrib:
-            header_list.extend['coordinates']
-        if attrib_list.favorites_attrib:
-            header_list.extend['favorites']
-        if attrib_list.id_str_attrib:
-            header_list.extend['id_str']
-        if attrib_list.entities_urls_attrib:
-            header_list.extend['entities_urls']
-        if attrib_list.entities_hashtags_attrib:
-            header_list.extend['entities_hashtags']
-        if attrib_list.entities_user_mentions_attrib:
-            header_list.extend['entities_user_mentions']
-        if attrib_list.coordinates_attrib:
-            header_list.extend['in_reply_to_user_id']
+    def tsv_output(self):
+        name = self._out_dir + self._file_name + "." + self._out_type
+        with open(name, "w+",encoding='utf-8') as the_file:
+            writer = csv.writer(the_file, delimiter='\t', lineterminator='\n')
+            data = self._result_set
+            for tweetObject in data:
+                try:
+                    timeCreatedUTC = tweetObject["created_at"]
+                except:
+                    timeCreatedUTC = None
+                try:
+                    favoriteCount = tweetObject["favorite_count"]
+                except:
+                    favoriteCount = 0
+                try:
+                    geoCoords = tweetObject["coordinates"]
+                except:
+                    geoCoords = None
+                try:
+                    tweetID = tweetObject["id"]
+                except:
+                    tweetID = None
+                try:
+                    retweetCount = tweetObject["retweet_count"]
+                except:
+                    retweetCount = 0
+                try:
+                    source = tweetObject["source"]
+                except:
+                    source = None
+                try:
+                    tweetText = re.sub('\s+',' ',tweetObject["text"])
+                except:
+                    tweetText = None
+                try:
+                    language = tweetObject["lang"]
+                except:
+                    language = None
+                try:
+                    place = tweetObject["place"]
+                except:
+                    place = None
+                try:
+                    timeOffset = tweetObject["user"]["utc_offset"]
+                except:
+                    timeOffset = None
+                try:
+                    twitterHandle = tweetObject["user"]["screen_name"]
+                except:
+                    twitterHandle = None
+                try:
+                    accountLocation = tweetObject["user"]["lang"]
+                except:
+                    accountLocation = None
+                try:
+                    accountName = re.sub('\s+',' ',tweetObject["user"]["name"])
+                except:
+                    accountName = None
+                tweetData = [tweetID,timeCreatedUTC,timeOffset,tweetText,favoriteCount,retweetCount,language,place,twitterHandle,accountLocation,accountName,source,geoCoords]
+                writer.writerow(tweetData)
+
 
     def flatten (data, prefix = None):
         print("to-do")
