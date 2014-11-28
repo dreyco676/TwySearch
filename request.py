@@ -15,11 +15,11 @@ class TwitterRequest(object):
         return self._request
 
     @request.setter
-    def search_param(self,value):
+    def request(self,value):
         self._request = value
 
     @request.deleter
-    def search_param(self):
+    def request(self):
         del self._request
 
 
