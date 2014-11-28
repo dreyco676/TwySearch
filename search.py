@@ -1,4 +1,5 @@
-from request import TwitterRequest
+from twitter import TwitterRequest
+from twitter import TwitterUser
 
 class Search(object):
     def __init__(self):
@@ -8,7 +9,6 @@ class Search(object):
         self._result_type = None
         self._max_results = None
         self._max_date = None
-        self._search_auth = None
         self._platform = None
 
     #KEYWORD
@@ -89,19 +89,6 @@ class Search(object):
     def max_date(self):
         del self._max_date
 
-    #SEARCH_AUTH
-    @property
-    def search_auth(self):
-        return self._search_auth
-
-    @search_auth.setter
-    def search_auth(self,value):
-        self._search_auth = value
-
-    @search_auth.deleter
-    def search_auth(self):
-        del self._search_auth
-
     #PLATFORM
     @property
     def platform(self):
@@ -118,13 +105,17 @@ class Search(object):
     def make_request(self):
         if self._platform == 'Twitter':
             req = TwitterRequest()
-            req._keyword = self._keyword
-            req._geocode = self._geocode
-            req._lang = self._lang
-            req._result_type = self._result_type
-            req._max_results = self._max_results
-            req._max_date = self._max_date
-            req._search_auth = self._search_auth
+            #set search parameters
+            req.keyword = self.keyword
+            req.geocode = self.geocode
+            req.lang = self.lang
+            req.result_type = self.result_type
+            req.max_results = self.max_results
+            req.max_date = self.max_date
+
+            #set auth
+            auth = TwitterUser()
+            req.search_auth = auth.read_json()
             data = req.make_request()
             return data
         else:
@@ -133,7 +124,7 @@ class Search(object):
     def estimate_request_time(self):
         if self._platform == 'Twitter':
             req = TwitterRequest()
-            req._max_results = self._max_results
+            req.max_results = self.max_results
             time = req.estimate_time()
             return time
         else:
