@@ -232,7 +232,7 @@ class TwitterRequest(object):
         self._result_type = None
         self._max_results = 0
         self._max_date = None
-        self._search_auth = None
+        self._session = None
         #twitter documentation
         #https://dev.twitter.com/rest/reference/get/search/tweets
 
@@ -314,18 +314,18 @@ class TwitterRequest(object):
     def max_date(self):
         del self._max_date
 
-    #SEARCH_AUTH
+    #SESSION
     @property
-    def search_auth(self):
-        return self._search_auth
+    def session(self):
+        return self._session
 
-    @search_auth.setter
-    def search_auth(self,value):
-        self._search_auth = value
+    @session.setter
+    def session(self,value):
+        self._session = value
 
-    @search_auth.deleter
-    def search_auth(self):
-        del self._search_auth
+    @session.deleter
+    def session(self):
+        del self._session
 
     def make_request(self):
         #read in all the parameters for the API call
@@ -370,7 +370,7 @@ class TwitterRequest(object):
         if count > 100:
             while count > 100:
                 start_time = datetime.datetime.now()
-                request = self.search_auth.search(q=q, geocode=geocode, lang=lang,
+                request = self.session.search(q=q, geocode=geocode, lang=lang,
                                     result_type=result_type, count=100, until=until, max_id=max_id)
 
                 #add request results to output
@@ -395,7 +395,7 @@ class TwitterRequest(object):
                 time.sleep(5 - elapsed_sec)
 
         #make final request
-        request = self.search_auth.search(q=q, geocode=geocode, lang=lang,
+        request = self.session.search(q=q, geocode=geocode, lang=lang,
                                 result_type=result_type, count=count, until=until, max_id=max_id)
         #add request results to output
         if max_id is None:

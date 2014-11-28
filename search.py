@@ -114,8 +114,9 @@ class Search(object):
             req.max_date = self.max_date
 
             #set auth
-            auth = TwitterUser()
-            req.search_auth = auth.read_json()
+            session = TwitterUser()
+            session.read_json()
+            req.session = session.auth()
             data = req.make_request()
             return data
         else:

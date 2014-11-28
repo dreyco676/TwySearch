@@ -1,7 +1,5 @@
-from search import TwitterSearch
-from request import TwitterRequest
-from output import FormatOutput
-from auth import TwitterUser
+from search import Search
+from output import Output
 from tkinter import *
 class Application (Frame):
 
@@ -11,50 +9,37 @@ class Application (Frame):
         self.create_widgets()
 
     def create_widgets(self) :
+        #Search keyword
         self.instruction= Label(self,text="Enter Keyword")
         self.instruction.grid(row=0, column=0, columnspan=1, sticky=W)
-
         self.keyword = Entry(self)
         self.keyword.grid(row=0, column=1, columnspan=1, sticky=W)
 
+        #Max Results
         self.max_result = Label(self,text="Enter Maximum Result")
         self.max_result.grid(row=1, column=0, columnspan=1, sticky=W)
-
         self.max_result2 = Entry(self)
         self.max_result2.grid(row=1, column=1, columnspan=1, sticky=W)
 
+        #Execute search
         self.search_button = Button(self, text="Search", command=self.reveal)
         self.search_button.grid(row=2, column=0, sticky=W)
 
-        #self.text= Text(self, width=70, height=40, wrap=WORD)
-        #self.text.grid(row=3, column=0, columnspan=2, sticky=W)
-
-        # self.download_button = Button(self, text="Download", command=self.download)
-        # self.download_button.grid(row=2, column=2, sticky=W)
-
     def reveal(self):
-        search = TwitterSearch()
+        search = Search()
         search.keyword= self.keyword.get()
-        search.search_auth = auth
         #print(self.max_result2.get())
         search.max_results =int(self.max_result2.get())
         search.platform = 'Twitter'
 
         data = search.make_request()
-        save = FormatOutput()
+        save = Output()
+        save.platform = search.platform
         save.file_name = 'Output'
         save.out_type = 'tsv'
         save.result_set = data
-        save.tsv_output()
+        save.format_output()
         print("done")
-
-
-
-
-#set user with application api credentials stored in json file
-user = TwitterUser()
-user.read_json()
-auth = user.auth()
 
 root = Tk()
 root.title("Twitter Search Downloader")
