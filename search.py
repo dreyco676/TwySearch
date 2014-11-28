@@ -8,6 +8,7 @@ class TwitterSearch(object):
         self._result_type = None
         self._max_results = None
         self._max_date = None
+        self._search_auth = None
         #twitter documentation
         #https://dev.twitter.com/rest/reference/get/search/tweets
 
@@ -88,3 +89,16 @@ class TwitterSearch(object):
     @max_date.deleter
     def max_date(self):
         del self._max_date
+
+    #SEARCH_AUTH
+    @property
+    def search_auth(self):
+        return self._search_auth
+
+    @search_auth.setter
+    def search_auth(self,value):
+        self._search_auth = value
+
+    @search_auth.deleter
+    def max_date(self):
+        del self._search_auth
