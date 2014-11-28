@@ -7,70 +7,56 @@ class TwitterRequest(object):
     def __init__(self):
         #twitter documentation
         #https://dev.twitter.com/rest/reference/get/search/tweets
-        self._req_param = None
-        self._session_auth = None
+        self._request= None
 
     #SEARCH_PARAM
     @property
-    def req_param(self):
-        return self._req_param
+    def request(self):
+        return self._request
 
-    @req_param.setter
+    @request.setter
     def search_param(self,value):
-        self._req_param = value
+        self._request = value
 
-    @req_param.deleter
+    @request.deleter
     def search_param(self):
-        del self._req_param
-
-    #SESSION_AUTH
-    @property
-    def session_auth(self):
-        return self._session_auth
-
-    @session_auth.setter
-    def session_auth(self,value):
-        self._session_auth = value
-
-    @session_auth.deleter
-    def session_auth(self):
-        del self._session_auth
+        del self._request
 
 
     def make_request(self):
         #read in all the parameters for the API call
         try:
-            if self._req_param._keyword is None:
+            if self._request._keyword is None:
                 raise Exception("'q' Parameter cannot be None!")
             else:
-                q = self._req_param._keyword
+                q = self._request._keyword
         except:
             raise Exception("'q' Parameter not defined!")
         try:
-            geocode = self._req_param._geocode
+            geocode = self._request._geocode
         except:
             raise Exception("'geocode' Parameter not defined!")
         try:
-            lang = self._req_param._lang
+            lang = self._request._lang
         except:
             raise Exception("'lang' Parameter not defined!")
         try:
-            result_type = self._req_param._result_type
+            result_type = self._request._result_type
         except:
             raise Exception("'result_type' Parameter not defined!")
         try:
-            if self._req_param._max_results is None:
+            if self._request._max_results is None:
                 #twitter default is 15
                 count = 15
-            elif self._req_param._max_results <= 100:
-                count = self._req_param._max_results
+            elif self._request._max_results <= 100:
+                count = self._request._max_results
             else:
-                count = self._req_param._max_results
+                count = self._request._max_results
                 print("WARNING: will induce multiple requests!")
         except:
             raise Exception("'count' Parameter not defined!")
         try:
-            until = self._req_param._max_date
+            until = self._request._max_date
         except:
             raise Exception("'until' Parameter not defined!")
 
@@ -80,7 +66,7 @@ class TwitterRequest(object):
         if count > 100:
             while count > 100:
                 start_time = datetime.datetime.now()
-                request = self._session_auth.search(q=q, geocode=geocode, lang=lang,
+                request = self._request._search_auth.search(q=q, geocode=geocode, lang=lang,
                                     result_type=result_type, count=100, until=until, max_id=max_id)
 
                 #add request results to output
@@ -105,7 +91,7 @@ class TwitterRequest(object):
                 time.sleep(5 - elapsed_sec)
 
         #make final request
-        request = self._session_auth.search(q=q, geocode=geocode, lang=lang,
+        request = self._request._search_auth.search(q=q, geocode=geocode, lang=lang,
                                 result_type=result_type, count=count, until=until, max_id=max_id)
         #add request results to output
         if max_id is None:
@@ -115,7 +101,10 @@ class TwitterRequest(object):
         return data
 
     def estimate_time(self):
-        num_requests = math.ceil(self._req_param._max_results / 100)
+        #see twitter rate handling for more info
+        #last update 2014-11-28
+        max_call_results = 100
+        num_requests = math.ceil(self._request._max_results / max_call_results)
         api_rate = 5
         estimate_completion = num_requests * api_rate
         return estimate_completion
