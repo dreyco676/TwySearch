@@ -72,25 +72,25 @@ class TwitterUser:
         json_data = open('auth.json')
         data = json.load(json_data)
         try:
-            self._app_key = data["app_key"]
+            self.app_key = data["app_key"]
         except:
             print("Error reading app_key")
         try:
-            self._app_secret = data["app_secret"]
+            self.app_secret = data["app_secret"]
         except:
             print("Error reading app_secret")
         try:
-            self._oauth_token = data["oauth_token"]
+            self.oauth_token = data["oauth_token"]
         except:
             print("Error reading oauth_token")
         try:
-            self._oauth_token_secret = data["oauth_token_secret"]
+            self.oauth_token_secret = data["oauth_token_secret"]
         except:
             print("Error reading oauth_token_secret")
         json_data.close()
 
     def auth(self):
-        twitter_auth = Twython(self._app_key, self._app_secret, self._oauth_token, self._oauth_token_secret)
+        twitter_auth = Twython(self.app_key, self.app_secret, self.oauth_token, self.oauth_token_secret)
         return twitter_auth
 
 
@@ -157,16 +157,16 @@ class TwitterOutput(object):
         del self._out_type
 
     def json_output(self):
-        name = self._out_dir + self._file_name + "." + self._out_type
+        name = self.out_dir + self.file_name + "." + self.out_type
         f = open(name, "w")
-        json.dump(self._result_set, f, indent=4)
+        json.dump(self.result_set, f, indent=4)
         f.close()
 
     def tsv_output(self):
-        name = self._out_dir + self._file_name + "." + self._out_type
+        name = self.out_dir + self.file_name + "." + self.out_type
         with open(name, "w+",encoding='utf-8') as the_file:
             writer = csv.writer(the_file, delimiter='\t', lineterminator='\n')
-            data = self._result_set
+            data = self.result_set
             for tweetObject in data:
                 try:
                     timeCreatedUTC = tweetObject["created_at"]
@@ -230,7 +230,7 @@ class TwitterRequest(object):
         self._geocode = None
         self._lang = None
         self._result_type = None
-        self._max_results = None
+        self._max_results = 0
         self._max_date = None
         self._search_auth = None
         #twitter documentation
@@ -330,37 +330,37 @@ class TwitterRequest(object):
     def make_request(self):
         #read in all the parameters for the API call
         try:
-            if self._keyword is None:
+            if self.keyword is None:
                 raise Exception("'q' Parameter cannot be None!")
             else:
-                q = self._keyword
+                q = self.keyword
         except:
             raise Exception("'q' Parameter not defined!")
         try:
-            geocode = self._geocode
+            geocode = self.geocode
         except:
             raise Exception("'geocode' Parameter not defined!")
         try:
-            lang = self._lang
+            lang = self.lang
         except:
             raise Exception("'lang' Parameter not defined!")
         try:
-            result_type = self._result_type
+            result_type = self.result_type
         except:
             raise Exception("'result_type' Parameter not defined!")
         try:
-            if self._max_results is None:
+            if self.max_results is None:
                 #twitter default is 15
                 count = 15
-            elif self._max_results <= 100:
-                count = self._max_results
+            elif self.max_results <= 100:
+                count = self.max_results
             else:
-                count = self._max_results
+                count = self.max_results
                 print("WARNING: will induce multiple requests!")
         except:
             raise Exception("'count' Parameter not defined!")
         try:
-            until = self._max_date
+            until = self.max_date
         except:
             raise Exception("'until' Parameter not defined!")
 
@@ -370,7 +370,7 @@ class TwitterRequest(object):
         if count > 100:
             while count > 100:
                 start_time = datetime.datetime.now()
-                request = self._search_auth.search(q=q, geocode=geocode, lang=lang,
+                request = self.search_auth.search(q=q, geocode=geocode, lang=lang,
                                     result_type=result_type, count=100, until=until, max_id=max_id)
 
                 #add request results to output
@@ -395,7 +395,7 @@ class TwitterRequest(object):
                 time.sleep(5 - elapsed_sec)
 
         #make final request
-        request = self._search_auth.search(q=q, geocode=geocode, lang=lang,
+        request = self.search_auth.search(q=q, geocode=geocode, lang=lang,
                                 result_type=result_type, count=count, until=until, max_id=max_id)
         #add request results to output
         if max_id is None:
@@ -408,7 +408,7 @@ class TwitterRequest(object):
         #see twitter rate handling for more info
         #last update 2014-11-28
         max_call_results = 100
-        num_requests = math.ceil(self._max_results / max_call_results)
+        num_requests = math.ceil(self.max_results / max_call_results)
         api_rate = 5
         estimate_completion = num_requests * api_rate
         return estimate_completion
