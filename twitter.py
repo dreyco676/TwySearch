@@ -385,7 +385,7 @@ class TwitterRequest(object):
 
                 #if no more tweets break out of loop
                 if count_returned == 0:
-                    count_returned = sys.maxint
+                    count_returned = sys.maxsize
                 count -= count_returned
 
                 #Rate Handling
