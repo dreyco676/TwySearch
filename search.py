@@ -1,4 +1,4 @@
-import request
+from request import TwitterRequest
 
 class TwitterSearch(object):
     def __init__(self):
@@ -9,6 +9,7 @@ class TwitterSearch(object):
         self._max_results = None
         self._max_date = None
         self._search_auth = None
+        self._platform = None
         #twitter documentation
         #https://dev.twitter.com/rest/reference/get/search/tweets
 
@@ -100,5 +101,36 @@ class TwitterSearch(object):
         self._search_auth = value
 
     @search_auth.deleter
-    def max_date(self):
+    def search_auth(self):
         del self._search_auth
+
+    #PLATFORM
+    @property
+    def platform(self):
+        return self._platform
+
+    @platform.setter
+    def platform(self,value):
+        self._platform = value
+
+    @platform.deleter
+    def platform(self):
+        del self._platform
+
+    def make_request(self):
+        if self._platform == 'Twitter':
+            req = TwitterRequest()
+            req.request = self
+            data = req.make_request()
+            return data
+        else:
+            print("Only Twitter is supported at this time")
+
+    def estimate_request_time(self):
+        if self._platform == 'Twitter':
+            req = TwitterRequest()
+            req.request = self
+            time = req.estimate_time()
+            return time
+        else:
+            print("Only Twitter is supported at this time")
