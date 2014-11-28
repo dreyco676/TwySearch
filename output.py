@@ -127,5 +127,6 @@ class FormatOutput(object):
                     accountName = re.sub('\s+',' ',tweetObject["user"]["name"])
                 except:
                     accountName = None
-                tweetData = [tweetID,timeCreatedUTC,timeOffset,tweetText,favoriteCount,retweetCount,language,place,twitterHandle,accountLocation,accountName,source,geoCoords]
+                tweetData = [tweetID,timeCreatedUTC,timeOffset,tweetText,favoriteCount,retweetCount,language,
+                             place,twitterHandle,accountLocation,accountName,source,geoCoords]
                 writer.writerow(tweetData)
