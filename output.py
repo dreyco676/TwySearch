@@ -43,7 +43,7 @@ class FormatOutput(object):
         return self._file_name
 
     @file_name.setter
-    def out_dir(self,value):
+    def file_name(self,value):
         self._file_name = value
 
     @file_name.deleter
@@ -129,7 +129,3 @@ class FormatOutput(object):
                     accountName = None
                 tweetData = [tweetID,timeCreatedUTC,timeOffset,tweetText,favoriteCount,retweetCount,language,place,twitterHandle,accountLocation,accountName,source,geoCoords]
                 writer.writerow(tweetData)
-
-
-    def flatten (data, prefix = None):
-        print("to-do")
