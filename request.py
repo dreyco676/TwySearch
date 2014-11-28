@@ -1,6 +1,7 @@
 import time
 import sys
 import datetime
+import math
 
 class TwitterRequest(object):
     def __init__(self):
@@ -114,4 +115,7 @@ class TwitterRequest(object):
         return data
 
     def estimate_time(self):
-        print("time estimate placeholder")
+        num_requests = math.ceil(self._req_param._max_results / 100)
+        api_rate = 5
+        estimate_completion = num_requests * api_rate
+        return estimate_completion
