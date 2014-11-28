@@ -35,25 +35,23 @@ class Application (Frame):
     def reveal(self):
         search = TwitterSearch()
         search.keyword= self.keyword.get()
+        search.search_auth = auth
         #print(self.max_result2.get())
         search.max_results =int(self.max_result2.get())
+        search.platform = 'Twitter'
 
-
-        req = TwitterRequest()
-        req._req_param = search
-        req._session_auth = auth
-        data = req.make_request()
+        data = search.make_request()
         save = FormatOutput()
-        save._file_name = 'Output'
-        save._out_type = 'tsv'
-        save._result_set = data
+        save.file_name = 'Output'
+        save.out_type = 'tsv'
+        save.result_set = data
         save.tsv_output()
         print("done")
 
 
 
 
-#set user
+#set user with application api credentials stored in json file
 user = TwitterUser()
 user.read_json()
 auth = user.auth()
