@@ -1,15 +1,12 @@
-import json
-import csv
-import re
+from twitter import TwitterOutput
 
-class FormatOutput(object):
+class Output(object):
     def __init__(self):
-        #twitter documentation
-        #https://dev.twitter.com/rest/reference/get/search/tweets
         self._out_dir = ''
         self._file_name = 'output'
-        self.delimiter = 'json'
+        self._out_type = 'json'
         self._result_set = None
+        self._platform = None
 
     #RESULT_SET
     @property
@@ -63,70 +60,33 @@ class FormatOutput(object):
     def out_type(self):
         del self._out_type
 
-    def json_output(self):
-        name = self._out_dir + self._file_name + "." + self._out_type
-        f = open(name, "w")
-        json.dump(self._result_set, f, indent=4)
-        f.close()
+    #PLATFORM
+    @property
+    def platform(self):
+        return self._platform
 
-    def tsv_output(self):
-        name = self._out_dir + self._file_name + "." + self._out_type
-        with open(name, "w+",encoding='utf-8') as the_file:
-            writer = csv.writer(the_file, delimiter='\t', lineterminator='\n')
-            data = self._result_set
-            for tweetObject in data:
-                try:
-                    timeCreatedUTC = tweetObject["created_at"]
-                except:
-                    timeCreatedUTC = None
-                try:
-                    favoriteCount = tweetObject["favorite_count"]
-                except:
-                    favoriteCount = 0
-                try:
-                    geoCoords = tweetObject["coordinates"]
-                except:
-                    geoCoords = None
-                try:
-                    tweetID = tweetObject["id"]
-                except:
-                    tweetID = None
-                try:
-                    retweetCount = tweetObject["retweet_count"]
-                except:
-                    retweetCount = 0
-                try:
-                    source = tweetObject["source"]
-                except:
-                    source = None
-                try:
-                    tweetText = re.sub('\s+',' ',tweetObject["text"])
-                except:
-                    tweetText = None
-                try:
-                    language = tweetObject["lang"]
-                except:
-                    language = None
-                try:
-                    place = tweetObject["place"]
-                except:
-                    place = None
-                try:
-                    timeOffset = tweetObject["user"]["utc_offset"]
-                except:
-                    timeOffset = None
-                try:
-                    twitterHandle = tweetObject["user"]["screen_name"]
-                except:
-                    twitterHandle = None
-                try:
-                    accountLocation = tweetObject["user"]["lang"]
-                except:
-                    accountLocation = None
-                try:
-                    accountName = re.sub('\s+',' ',tweetObject["user"]["name"])
-                except:
-                    accountName = None
-                tweetData = [tweetID,timeCreatedUTC,timeOffset,tweetText,favoriteCount,retweetCount,language,
-                             place,twitterHandle,accountLocation,accountName,source,geoCoords]
-                writer.writerow(tweetData)
+    @platform.setter
+    def platform(self,value):
+        self._platform = value
+
+    @platform.deleter
+    def platform(self):
+        del self._platform
+
+
+    def format_output(self):
+        if self._platform == 'Twitter':
+            twitter = TwitterOutput()
+            twitter.out_dir = self._out_dir
+            twitter.file_name = self._file_name
+            twitter.out_type = self._out_type
+            twitter.result_set = self._result_set
+
+            if self._out_type == 'json':
+                twitter.json_output()
+            elif self._out_type == 'tsv':
+                twitter.tsv_output()
+            else:
+                print("Only .tsv and .json are supported at this time.")
+        else:
+            print("Only Twitter is supported at this time.")
