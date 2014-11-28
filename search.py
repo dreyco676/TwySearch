@@ -1,6 +1,6 @@
 from request import TwitterRequest
 
-class TwitterSearch(object):
+class Search(object):
     def __init__(self):
         self._keyword = None
         self._geocode = None
@@ -10,8 +10,6 @@ class TwitterSearch(object):
         self._max_date = None
         self._search_auth = None
         self._platform = None
-        #twitter documentation
-        #https://dev.twitter.com/rest/reference/get/search/tweets
 
     #KEYWORD
     @property
@@ -120,7 +118,13 @@ class TwitterSearch(object):
     def make_request(self):
         if self._platform == 'Twitter':
             req = TwitterRequest()
-            req.request = self
+            req._keyword = self._keyword
+            req._geocode = self._geocode
+            req._lang = self._lang
+            req._result_type = self._result_type
+            req._max_results = self._max_results
+            req._max_date = self._max_date
+            req._search_auth = self._search_auth
             data = req.make_request()
             return data
         else:
@@ -129,7 +133,7 @@ class TwitterSearch(object):
     def estimate_request_time(self):
         if self._platform == 'Twitter':
             req = TwitterRequest()
-            req.request = self
+            req._max_results = self._max_results
             time = req.estimate_time()
             return time
         else:
