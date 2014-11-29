@@ -295,7 +295,7 @@ class TwitterRequest(object):
 
     @max_results.setter
     def max_results(self,value):
-        self._max_results = value
+        self._max_results = int(value)
 
     @max_results.deleter
     def max_results(self):
