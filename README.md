@@ -10,3 +10,5 @@ https://dev.twitter.com/rest/reference/get/search/tweets
 Get your application credentials here to fill out the auth.json file:
 
 https://dev.twitter.com/oauth/application-only
+
+Default output is .json but you can manually save the file as .tsv
