@@ -38,34 +38,36 @@ class Application (Frame):
         self.max_results.grid(row=8, column=0, columnspan=1, sticky=W)
 
         #Geocode
-        self.geocode_desc = Label(self,text="Select Geocode")
+        #(latitude,longitude,radius[mi/km])
+        self.geocode_desc = Label(self,text="Enter Geocode")
         self.geocode_desc.grid(row=7, column=1, columnspan=1, sticky=W)
-        geocode_options = ['Twitter','Placeholder']
-        self.geocode_v = StringVar()
-        self.geocode_v.set(geocode_options[0])
-        self.geocode_om = OptionMenu(self, self.geocode_v, *geocode_options)
-        self.geocode_om.grid(row=8, column=1, columnspan=1, sticky=W)
+        self.geocode = Entry(self)
+        self.geocode.grid(row=8, column=1, columnspan=1, sticky=W)
 
         #Lang
+        #use 639-1 language codes
+        #picked top languages http://www.statista.com/statistics/267129/most-used-languages-on-twitter/
         self.result_type_desc = Label(self,text="Select Result Type")
         self.result_type_desc.grid(row=7, column=2, columnspan=1, sticky=W)
-        result_type_options = ['Twitter','Placeholder']
+        lang_options = {'None':'None','Arabic':'ar', 'Dutch':'nl', 'English':'en', 'Japanese':'ja', 'Korean':'ko',
+                        'Portuguese':'pt', 'Spanish':'es', 'Malay':'ms', 'Thai':'th'}
         self.result_type_v = StringVar()
-        self.result_type_v.set(result_type_options[0])
-        self.result_type_om = OptionMenu(self, self.result_type_v, *result_type_options)
+        self.result_type_v.set(list(lang_options.keys())[0])
+        self.result_type_om = OptionMenu(self, self.result_type_v, *lang_options)
         self.result_type_om.grid(row=8, column=2, columnspan=1, sticky=W)
 
         #Result_type
         self.lang_desc = Label(self,text="Select Language")
         self.lang_desc.grid(row=9, column=0, columnspan=1, sticky=W)
-        lang_options = ['Twitter','Placeholder']
+        lang_options = ['Mixed','Recent','Popular']
         self.lang_v = StringVar()
         self.lang_v.set(lang_options[0])
         self.lang_om = OptionMenu(self, self.lang_v, *lang_options)
         self.lang_om.grid(row=10, column=0, columnspan=1, sticky=W)
 
         #Max Date
-        self.max_date_desc = Label(self,text="Enter Max Date (YYYY-MM-DD)")
+        #(YYYY-MM-DD)
+        self.max_date_desc = Label(self,text="Enter Max Date")
         self.max_date_desc.grid(row=9, column=1, columnspan=1, sticky=W)
         self.max_date = Entry(self)
         self.max_date.grid(row=10, column=1, columnspan=1, sticky=W)
@@ -90,7 +92,7 @@ class Application (Frame):
         #Output_type
         self.out_type_desc = Label(self,text="Select an Output Type")
         self.out_type_desc.grid(row=16, column=1, columnspan=1, sticky=W)
-        out_type_options = ['Twitter','Placeholder']
+        out_type_options = ['.tsv','.json']
         self.out_type_v = StringVar()
         self.out_type_v.set(out_type_options[0])
         self.out_type_om = OptionMenu(self, self.out_type_v, *out_type_options)
