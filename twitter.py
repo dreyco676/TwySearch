@@ -230,7 +230,7 @@ class TwitterRequest(object):
         self._geocode = None
         self._lang = None
         self._result_type = None
-        self._max_results = 0
+        self._max_results = 100
         self._max_date = None
         self._session = None
         #twitter documentation
@@ -295,7 +295,10 @@ class TwitterRequest(object):
 
     @max_results.setter
     def max_results(self,value):
-        self._max_results = int(value)
+        try:
+            self._max_results = int(value)
+        except:
+            self._max_results = 100
 
     @max_results.deleter
     def max_results(self):
