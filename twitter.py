@@ -99,9 +99,7 @@ class TwitterOutput(object):
     def __init__(self):
         #twitter documentation
         #https://dev.twitter.com/rest/reference/get/search/tweets
-        self._out_dir = ''
-        self._file_name = 'output'
-        self._out_type = 'json'
+        self._file_name = 'output.json'
         self._result_set = None
 
     #RESULT_SET
@@ -117,19 +115,6 @@ class TwitterOutput(object):
     def result_set(self):
         del self._result_set
 
-    #OUT_DIR
-    @property
-    def out_dir(self):
-        return self._out_dir
-
-    @out_dir.setter
-    def out_dir(self,value):
-        self._out_dir = value
-
-    @out_dir.deleter
-    def out_dir(self):
-        del self._out_dir
-
     #FILE_NAME
     @property
     def file_name(self):
@@ -143,27 +128,14 @@ class TwitterOutput(object):
     def file_name(self):
         del self._file_name
 
-    #OUT_TYPE
-    @property
-    def out_type(self):
-        return self._out_type
-
-    @out_type.setter
-    def out_type(self,value):
-        self._out_type = value
-
-    @out_type.deleter
-    def out_type(self):
-        del self._out_type
-
     def json_output(self):
-        name = self.out_dir + self.file_name + "." + self.out_type
+        name = self.file_name
         f = open(name, "w")
         json.dump(self.result_set, f, indent=4)
         f.close()
 
     def tsv_output(self):
-        name = self.out_dir + self.file_name + "." + self.out_type
+        name = self.file_name
         with open(name, "w+",encoding='utf-8') as the_file:
             writer = csv.writer(the_file, delimiter='\t', lineterminator='\n')
             data = self.result_set

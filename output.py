@@ -2,8 +2,7 @@ from twitter import TwitterOutput
 
 class Output(object):
     def __init__(self):
-        self._out_dir = ''
-        self._file_name = 'output'
+        self._file_name = 'output.json'
         self._out_type = 'json'
         self._result_set = None
         self._platform = None
@@ -77,14 +76,12 @@ class Output(object):
     def format_output(self):
         if self._platform == 'Twitter':
             twitter = TwitterOutput()
-            twitter.out_dir = self._out_dir
             twitter.file_name = self._file_name
-            twitter.out_type = self._out_type
             twitter.result_set = self._result_set
 
-            if self._out_type == 'json':
+            if self._out_type == '.json':
                 twitter.json_output()
-            elif self._out_type == 'tsv':
+            elif self._out_type == '.tsv':
                 twitter.tsv_output()
             else:
                 print("Only .tsv and .json are supported at this time.")
