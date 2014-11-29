@@ -1,6 +1,8 @@
 from search import Search
 from output import Output
 from tkinter import *
+from tkinter import messagebox
+
 class Application (Frame):
 
     def __init__(self, master):
@@ -19,7 +21,15 @@ class Application (Frame):
         #Platform
         self.platform_desc = Label(self,text="Select a platform")
         self.platform_desc.grid(row=0, column=2, columnspan=1, sticky=W)
-        self.platform = Entry(self)
+        self.platform = Menubutton(text="Available Platforms")
+        self.platform.menu = Menu(self.platform, tearoff=0)
+        self.platform["menu"] = self.platform.menu
+        twitter_var = IntVar()
+        ebay_var = IntVar()
+        self.platform.menu.add_checkbutton(label="Twitter",
+                                  variable=twitter_var)
+        self.platform.menu.add_checkbutton(label="Ebay",
+                                  variable=ebay_var)
         self.platform.grid(row=1, column=2, columnspan=1, sticky=W)
 
         #ADVANCED OPTIONS

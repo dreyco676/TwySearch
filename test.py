@@ -1,14 +1,19 @@
-from twython import Twython
-import urllib.request
-import json
-from auth import TwitterUser
-twitter = TwitterUser()
-twitter.read_json()
-auth = twitter.auth()
-print(twitter._app_key)
-#twitter = Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
+from tkinter import *
 
+root = Tk()
 
-request = auth.search(q='python', result_type='Popular', geocode=None, count=100)
+mb=  Menubutton(root, text="condiments", relief=RAISED )
+mb.grid()
+mb.menu  =  Menu( mb, tearoff=0 )
+mb["menu"]  =  mb.menu
 
-print(len(request["statuses"]))
+mayoVar  = IntVar()
+ketchVar = IntVar()
+
+mb.menu.add_checkbutton ( label="mayo",
+                          variable=mayoVar )
+mb.menu.add_checkbutton ( label="ketchup",
+                          variable=ketchVar )
+
+mb.pack()
+root.mainloop()
