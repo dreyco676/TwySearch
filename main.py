@@ -112,6 +112,7 @@ class Application (Frame):
         search.lang = self.lang_options[self.lang_v.get()]
         search.result_type = self.result_type_v.get()
         search.max_date = self.max_date.get()
+        messagebox.showinfo("Estimated Time to Complete", str(search.estimate_request_time()) + ' Seconds')
 
         data = search.make_request()
         save = Output()
@@ -121,7 +122,6 @@ class Application (Frame):
         save.out_type = self.file_type
         save.result_set = data
         save.format_output()
-        messagebox.showinfo("Estimated Time to Complete", str(search.estimate_request_time()) + ' Seconds')
         messagebox.showinfo("Completed", "Search Completed")
 
 root = Tk()
