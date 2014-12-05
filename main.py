@@ -5,7 +5,7 @@ from tkinter import messagebox
 from tkinter import filedialog
 import os
 
-class Application (Frame):
+class SearchDownloader (Frame):
 
     def __init__(self, master):
         Frame.__init__(self, master)
