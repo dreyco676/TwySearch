@@ -127,7 +127,7 @@ class SearchDownloader (Frame):
 root = Tk()
 root.title("Twitter Search Downloader")
 root.geometry("450x275")
-app = Application(root)
+app = SearchDownloader(root)
 root.mainloop()
 
 
