@@ -171,6 +171,9 @@ class TwitterOutput(object):
         name = self.file_name
         with open(name, "w+",encoding='utf-8') as the_file:
             writer = csv.writer(the_file, delimiter='\t', lineterminator='\n')
+            header = ['tweetID','timeCreatedUTC','timeOffset','tweetText','favoriteCount','retweetCount','language',
+                             'place','twitterHandle','accountLocation','accountName','source','geoCoords']
+            writer.writerow(header)
             data = self.result_set
             for tweetObject in data:
                 try:
