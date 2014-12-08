@@ -27,10 +27,17 @@ TwySearch is a graphical user interface for accessing the Twitter Search API.
 | Optional Parameters | Description | Example |
 | --------- | ----------- | ------- |
 | geocode | Returns tweets by users located within a given radius of the given latitude/longitude. The location is preferentially taking from the Geotagging API, but will fall back to their Twitter profile. The parameter value is specified by “latitude,longitude,radius”, where radius units must be specified as either “mi” (miles) or “km” (kilometers). Note that you cannot use the near operator via the API to geocode arbitrary locations; however you can use this geocode parameter to search near geocodes directly. A maximum of 1,000 distinct “sub-regions” will be considered when using the radius modifier. | 37.781157,-122.398720,1mi |
-| lang | Restricts tweets to the given language, given by an ISO 639-1 code. Language detection is best-effort. | eu |
+| Language | Restricts tweets to the given language, currently the 9 most common languages in Twitter. Language detection is best-effort. | eu |
 | result_type | Specifies what type of search results you would prefer to receive. The current default is “mixed.” Mixed: Include both popular and real time results in the response. Recent: return only the most recent results in the response. Popular: return only the most popular results in the response. | mixed, recent, popular |
-| Maximum Results | The number of tweets to return, default is 100. Not sure of the memory effieciency for large sets. | 100 |
-| Min Date | Returns tweets generated before the given date. Date should be formatted as YYYY-MM-DD. Keep in mind that the search index may not go back as far as the date you specify here. | 2012-09-01 |
+| Maximum Results | The number of tweets to return, default is 15. Not sure of the memory effieciency for large numbers. | 100 |
+| Max Date | Returns tweets generated before the given date. Date should be formatted as YYYY-MM-DD. Keep in mind that the search index may not go back as far as the date you specify here. | 2012-09-01 |
+
+##Output Options
+* Default is to a .tsv file (tab separated) .json extension is also supported.
+* Currently .tsv only selects a sub selection of available fields, let me know if you'd like more added.
+
+##New Users
+* New Users will be asked to authorize the application with Twitter before you can proceed.
 
 ##Dependencies
 * Written in Python 3.4, probably works on 3.X
@@ -40,14 +47,3 @@ TwySearch is a graphical user interface for accessing the Twitter Search API.
 * Package dependencies
 * Expand error handling and saftey rails
 * Provide exe from py2exe for easy of use on Windows
-
-
-Further descriptions of what each parameter can take can be found here:
-
-https://dev.twitter.com/rest/reference/get/search/tweets
-
-Get your application credentials here to fill out the auth.json file:
-
-https://dev.twitter.com/oauth/application-only
-
-Default output is .json but you can manually save the file as .tsv
