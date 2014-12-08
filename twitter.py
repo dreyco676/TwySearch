@@ -228,7 +228,7 @@ class TwitterRequest(object):
         self._geocode = None
         self._lang = None
         self._result_type = None
-        self._max_results = 15
+        self._max_results = None
         self._max_date = None
         self._session = None
         #twitter documentation
@@ -254,7 +254,10 @@ class TwitterRequest(object):
 
     @geocode.setter
     def geocode(self,value):
-        self._geocode = value
+        if len(value) == 0:
+            self._geocode = None
+        else:
+            self._geocode = value
 
     @geocode.deleter
     def geocode(self):
@@ -267,7 +270,10 @@ class TwitterRequest(object):
 
     @lang.setter
     def lang(self,value):
-        self._lang = value
+        if value == 'None':
+            self._lang = None
+        else:
+            self._lang = value
 
     @lang.deleter
     def lang(self):
@@ -309,7 +315,10 @@ class TwitterRequest(object):
 
     @max_date.setter
     def max_date(self,value):
-        self._max_date = value
+        if len(value) == 0:
+            self._max_date = None
+        else:
+            self._max_date = value
 
     @max_date.deleter
     def max_date(self):
@@ -337,7 +346,6 @@ class TwitterRequest(object):
                 start_time = datetime.datetime.now()
                 request = self.session.search(q=self.keyword, geocode=self.geocode, lang=self.lang,
                                     result_type=self.result_type, count=100, until=self.max_date, max_id=max_id)
-
                 #add request results to output
                 if max_id is None:
                     data = request["statuses"]
