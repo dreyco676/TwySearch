@@ -115,7 +115,6 @@ class Search(object):
 
             #set auth
             session = TwitterUser()
-            session.read_json()
             req.session = session.auth()
             data = req.make_request()
             return data
