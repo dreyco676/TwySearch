@@ -15,7 +15,7 @@ TwySearch is a graphical user interface for accessing the Twitter Search API.
 | from:alexiskold |	sent from person “alexiskold”. |
 | to:techcrunch |	sent to person “techcrunch”. |
 | @mashable |	referencing person “mashable”. |
-| superhero | since:2010-12-27	containing “superhero” and sent since date “2010-12-27” (year-month-day). |
+| superhero since:2010-12-27 | containing “superhero” and sent since date “2010-12-27” (year-month-day). |
 | ftw until:2010-12-27 |	containing “ftw” and sent before the date “2010-12-27”. |
 | movie -scary :)	| containing “movie”, but not “scary”, and with a positive attitude. |
 | flight :(	| containing “flight” and with a negative attitude. |
