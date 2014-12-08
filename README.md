@@ -6,7 +6,7 @@ TwySearch is a graphical user interface for accessing the Twitter Search API.
 
 ##Keyword Options
 | Operator |	Finds tweets… |
-||------------------||-------------------------------------------------|
+| ------------------ | ------------------------------------------------- |
 | watching now	| containing both “watching” and “now”. This is the default operator. |
 | “happy hour” |	containing the exact phrase “happy hour”. |
 | love OR hate |	containing either “love” or “hate” (or both). |
