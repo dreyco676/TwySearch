@@ -235,7 +235,7 @@ class TwitterRequest(object):
         self._geocode = None
         self._lang = None
         self._result_type = None
-        self._max_results = 100
+        self._max_results = 15
         self._max_date = None
         self._session = None
         #twitter documentation
@@ -303,7 +303,7 @@ class TwitterRequest(object):
         try:
             self._max_results = int(value)
         except:
-            self._max_results = 100
+            self._max_results = 15
 
     @max_results.deleter
     def max_results(self):
@@ -336,50 +336,14 @@ class TwitterRequest(object):
         del self._session
 
     def make_request(self):
-        #read in all the parameters for the API call
-        try:
-            if self.keyword is None:
-                raise Exception("'q' Parameter cannot be None!")
-            else:
-                q = self.keyword
-        except:
-            raise Exception("'q' Parameter not defined!")
-        try:
-            geocode = self.geocode
-        except:
-            raise Exception("'geocode' Parameter not defined!")
-        try:
-            lang = self.lang
-        except:
-            raise Exception("'lang' Parameter not defined!")
-        try:
-            result_type = self.result_type
-        except:
-            raise Exception("'result_type' Parameter not defined!")
-        try:
-            if self.max_results is None:
-                #twitter default is 15
-                count = 15
-            elif self.max_results <= 100:
-                count = self.max_results
-            else:
-                count = self.max_results
-                print("WARNING: will induce multiple requests!")
-        except:
-            raise Exception("'count' Parameter not defined!")
-        try:
-            until = self.max_date
-        except:
-            raise Exception("'until' Parameter not defined!")
-
         #for paging read tweets older than max_id
         max_id = None
         data = {}
-        if count > 100:
-            while count > 100:
+        if self.max_results > 100:
+            while self.max_results > 100:
                 start_time = datetime.datetime.now()
-                request = self.session.search(q=q, geocode=geocode, lang=lang,
-                                    result_type=result_type, count=100, until=until, max_id=max_id)
+                request = self.session.search(q=self.keyword, geocode=self.geocode, lang=self.lang,
+                                    result_type=self.result_type, count=100, until=self.max_date, max_id=max_id)
 
                 #add request results to output
                 if max_id is None:
@@ -394,7 +358,7 @@ class TwitterRequest(object):
                 #if no more tweets break out of loop
                 if count_returned == 0:
                     count_returned = sys.maxsize
-                count -= count_returned
+                self.max_results -= count_returned
 
                 #Rate Handling
                 #twitter rate limits at 180/15min = 1/5sec
@@ -402,9 +366,9 @@ class TwitterRequest(object):
                 elapsed_sec = (end_time - start_time).total_seconds()
                 time.sleep(5 - elapsed_sec)
 
-        #make final request
-        request = self.session.search(q=q, geocode=geocode, lang=lang,
-                                result_type=result_type, count=count, until=until, max_id=max_id)
+        #make request that is >=100
+        request = self.session.search(q=self.keyword, geocode=self.geocode, lang=self.lang,
+                                result_type=self.result_type, count=self.max_results, until=self.max_date, max_id=max_id)
         #add request results to output
         if max_id is None:
             data = request["statuses"]
