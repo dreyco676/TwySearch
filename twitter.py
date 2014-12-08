@@ -68,8 +68,52 @@ class TwitterUser:
     def oauth_token_secret(self):
         del self._oauth_token_secret
 
-    def read_json(self):
-        json_data = open('auth.json')
+    def read_app_json(self):
+        json_data = open('user_auth.json')
+        data = json.load(json_data)
+        try:
+            self.app_key = data["app_key"]
+        except:
+            print("Error reading app_key")
+        try:
+            self.app_secret = data["app_secret"]
+        except:
+            print("Error reading app_secret")
+        json_data.close()
+
+    def read_app_json(self):
+        #read the application credentials
+        json_data = open('app_auth.json')
+        data = json.load(json_data)
+        try:
+            self.app_key = data["app_key"]
+        except:
+            print("Error reading app_key")
+        try:
+            self.app_secret = data["app_secret"]
+        except:
+            print("Error reading app_secret")
+        json_data.close()
+
+    def auth_url(self):
+        self.read_app_json()
+        #get auth url from twitter
+        twitter = Twython(self.app_key, self.app_secret)
+        auth = twitter.get_authentication_tokens()
+        #set oauth token
+        self.oauth_token = auth["oauth_token"]
+        self.oauth_token_secret = auth["oauth_token_secret"]
+        url = auth['auth_url']
+        return url
+
+    def write_user_json(self, oauth_verifier):
+        twitter = self.auth()
+        user_cred = twitter.get_authorized_tokens(oauth_verifier)
+        with open('user_auth.json', 'w') as outfile:
+          json.dump(user_cred, outfile)
+
+    def read_user_json(self):
+        json_data = open('user_auth.json')
         data = json.load(json_data)
         try:
             self.app_key = data["app_key"]
