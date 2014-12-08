@@ -8,7 +8,7 @@ import time
 import sys
 import datetime
 import math
-import os
+import os.path
 
 class TwitterUser:
     def __init__(self):
@@ -73,14 +73,8 @@ class TwitterUser:
         #read the application credentials
         json_data = open('app_auth.json')
         data = json.load(json_data)
-        try:
-            self.app_key = data["app_key"]
-        except:
-            print("Error reading app_key")
-        try:
-            self.app_secret = data["app_secret"]
-        except:
-            print("Error reading app_secret")
+        self.app_key = data["app_key"]
+        self.app_secret = data["app_secret"]
         json_data.close()
 
     def auth_url(self):
@@ -99,29 +93,22 @@ class TwitterUser:
         user_cred = twitter.get_authorized_tokens(oauth_verifier)
         with open('user_auth.json', 'w+') as outfile:
           json.dump(user_cred, outfile)
-        self.read_user_json()
 
     def read_user_json(self):
         json_data = open('user_auth.json')
         data = json.load(json_data)
-        try:
-            self.oauth_token = data["oauth_token"]
-        except:
-            print("Error reading oauth_token")
-        try:
-            self.oauth_token_secret = data["oauth_token_secret"]
-        except:
-            print("Error reading oauth_token_secret")
+        self.oauth_token = data["oauth_token"]
+        self.oauth_token_secret = data["oauth_token_secret"]
         json_data.close()
 
     def new_user(self):
-        if os.path.exists('user_auth.json'):
-            self.read_user_json()
+        if os.path.isfile('user_auth.json'):
             return False
         else:
             return True
 
     def auth(self):
+        self.read_app_json()
         twitter_auth = Twython(self.app_key, self.app_secret, self.oauth_token, self.oauth_token_secret)
         return twitter_auth
 
@@ -132,7 +119,7 @@ class TwitterOutput(object):
     def __init__(self):
         #twitter documentation
         #https://dev.twitter.com/rest/reference/get/search/tweets
-        self._file_name = 'output.json'
+        self._file_name = 'output.tsv'
         self._result_set = None
 
     #RESULT_SET
@@ -155,7 +142,10 @@ class TwitterOutput(object):
 
     @file_name.setter
     def file_name(self,value):
-        self._file_name = value
+        if value is None:
+            self._file_name = 'Output.tsv'
+        else:
+            self._file_name = value
 
     @file_name.deleter
     def file_name(self):
@@ -163,7 +153,7 @@ class TwitterOutput(object):
 
     def json_output(self):
         name = self.file_name
-        f = open(name, "w")
+        f = open(name, "w+")
         json.dump(self.result_set, f, indent=4)
         f.close()
 
