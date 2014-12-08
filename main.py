@@ -1,11 +1,13 @@
-from search import Search
-from output import Output
+from twitter import TwitterUser
+from twitter import TwitterRequest
+from twitter import TwitterOutput
 from tkinter import *
 from tkinter import messagebox
 from tkinter import filedialog
+import webbrowser
 import os
 
-class SearchDownloader (Frame):
+class TwySearch(Frame):
 
     def __init__(self, master):
         Frame.__init__(self, master)
@@ -16,18 +18,9 @@ class SearchDownloader (Frame):
 
         #Search keyword
         self.keyword_desc = Label(self,text="Enter Keyword")
-        self.keyword_desc.grid(row=0, column=0, columnspan=1)
+        self.keyword_desc.grid(row=0, column=0, columnspan=3)
         self.keyword = Entry(self)
-        self.keyword.grid(row=1, column=0, columnspan=1)
-
-        #Platform
-        self.platform_desc = Label(self,text="Select a platform")
-        self.platform_desc.grid(row=0, column=2, columnspan=1)
-        platform_options = ['Twitter']
-        self.platform_v = StringVar()
-        self.platform_v.set(platform_options[0])
-        self.platform_om = OptionMenu(self, self.platform_v, *platform_options)
-        self.platform_om.grid(row=1, column=2, columnspan=1)
+        self.keyword.grid(row=1, column=0, columnspan=3)
 
         #Divider
         self.div1 = Label(self,text="____________________________________________________________________")
@@ -95,39 +88,69 @@ class SearchDownloader (Frame):
 
     def save_as(self):
         self.file_opt = options = {}
-        options['filetypes'] = [('JSON', '.json'), ('Tab Seperated', '.tsv')]
-        options['initialfile'] = 'myfile.json'
+        options['filetypes'] = [('JSON', '.json'), ('Tab Separated', '.tsv')]
+        options['initialfile'] = 'myfile.tsv'
         options['parent'] = root
         file = filedialog.asksaveasfilename(**self.file_opt)
         self.file_name = file
         self.file_type = os.path.splitext(file)[1]
 
+    #new user popup window
+    def popup(self):
+        self.w=NewUser(self.master)
+        self.master.wait_window(self.w.top)
+
     def start_search(self):
-        search = Search()
+        #new user check
+        user = TwitterUser()
+        if user.new_user:
+            webbrowser.open(user.auth_url())
+            new_user = self.popup()
+            user.save_user(self.w.value)
+
+        search = TwitterRequest()
+
         #set values for search from GUI
         search.keyword = self.keyword.get()
-        search.platform = self.platform_v.get()
         search.max_results = self.max_results.get()
         search.geocode = self.geocode.get()
         search.lang = self.lang_options[self.lang_v.get()]
         search.result_type = self.result_type_v.get()
         search.max_date = self.max_date.get()
-        messagebox.showinfo("Estimated Time to Complete", str(search.estimate_request_time()) + ' Seconds')
+        search.session = user.auth()
+        messagebox.showinfo("Estimated Time to Complete", str(search.estimate_time()) + ' Seconds')
 
         data = search.make_request()
-        save = Output()
+        save = TwitterOutput()
         #set values from GUI
-        save.platform = search.platform
         save.file_name = self.file_name
         save.out_type = self.file_type
         save.result_set = data
-        save.format_output()
+        if save.out_type == '.json':
+            save.json_output()
+        elif save.out_type == '.tsv':
+            save.tsv_output()
         messagebox.showinfo("Completed", "Search Completed")
+
+
+#popup window for creating a new user
+class NewUser(object):
+    def __init__(self,master):
+        top=self.top=Toplevel(master)
+        self.l=Label(top,text="Enter PIN from Twitter")
+        self.l.pack()
+        self.e=Entry(top)
+        self.e.pack()
+        self.b=Button(top,text='Ok',command=self.cleanup)
+        self.b.pack()
+    def cleanup(self):
+        self.value=self.e.get()
+        self.top.destroy()
 
 root = Tk()
 root.title("Twitter Search Downloader")
 root.geometry("450x275")
-app = SearchDownloader(root)
+app = TwySearch(root)
 root.mainloop()
 
 
