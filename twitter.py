@@ -8,6 +8,7 @@ import time
 import sys
 import datetime
 import math
+import os
 
 class TwitterUser:
     def __init__(self):
@@ -69,19 +70,6 @@ class TwitterUser:
         del self._oauth_token_secret
 
     def read_app_json(self):
-        json_data = open('user_auth.json')
-        data = json.load(json_data)
-        try:
-            self.app_key = data["app_key"]
-        except:
-            print("Error reading app_key")
-        try:
-            self.app_secret = data["app_secret"]
-        except:
-            print("Error reading app_secret")
-        json_data.close()
-
-    def read_app_json(self):
         #read the application credentials
         json_data = open('app_auth.json')
         data = json.load(json_data)
@@ -106,23 +94,16 @@ class TwitterUser:
         url = auth['auth_url']
         return url
 
-    def write_user_json(self, oauth_verifier):
+    def save_user(self, oauth_verifier):
         twitter = self.auth()
         user_cred = twitter.get_authorized_tokens(oauth_verifier)
-        with open('user_auth.json', 'w') as outfile:
+        with open('user_auth.json', 'w+') as outfile:
           json.dump(user_cred, outfile)
+        self.read_user_json()
 
     def read_user_json(self):
         json_data = open('user_auth.json')
         data = json.load(json_data)
-        try:
-            self.app_key = data["app_key"]
-        except:
-            print("Error reading app_key")
-        try:
-            self.app_secret = data["app_secret"]
-        except:
-            print("Error reading app_secret")
         try:
             self.oauth_token = data["oauth_token"]
         except:
@@ -133,9 +114,17 @@ class TwitterUser:
             print("Error reading oauth_token_secret")
         json_data.close()
 
+    def new_user(self):
+        if os.path.exists('user_auth.json'):
+            self.read_user_json()
+            return False
+        else:
+            return True
+
     def auth(self):
         twitter_auth = Twython(self.app_key, self.app_secret, self.oauth_token, self.oauth_token_secret)
         return twitter_auth
+
 
 
 
