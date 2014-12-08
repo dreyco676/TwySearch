@@ -103,10 +103,11 @@ class TwySearch(Frame):
     def start_search(self):
         #new user check
         user = TwitterUser()
-        if user.new_user:
+        if user.new_user():
             webbrowser.open(user.auth_url())
             new_user = self.popup()
             user.save_user(self.w.value)
+        user.read_user_json()
 
         search = TwitterRequest()
 
@@ -123,8 +124,12 @@ class TwySearch(Frame):
         data = search.make_request()
         save = TwitterOutput()
         #set values from GUI
-        save.file_name = self.file_name
-        save.out_type = self.file_type
+        try:
+            save.file_name = self.file_name
+            save.out_type = self.file_type
+        except:
+            save.file_name = 'Output.tsv'
+            save.out_type = '.tsv'
         save.result_set = data
         if save.out_type == '.json':
             save.json_output()
