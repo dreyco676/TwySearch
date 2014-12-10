@@ -1,0 +1,1809 @@
+[
+    {
+        "id": 542794715876569088,
+        "truncated": false,
+        "entities": {
+            "urls": [
+                {
+                    "expanded_url": "http://bit.ly/W9Zxx7",
+                    "indices": [
+                        65,
+                        87
+                    ],
+                    "display_url": "bit.ly/W9Zxx7",
+                    "url": "http://t.co/ocKIQLVMum"
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [],
+            "hashtags": [
+                {
+                    "text": "French",
+                    "indices": [
+                        29,
+                        36
+                    ]
+                },
+                {
+                    "text": "Java",
+                    "indices": [
+                        42,
+                        47
+                    ]
+                },
+                {
+                    "text": "Python",
+                    "indices": [
+                        56,
+                        63
+                    ]
+                }
+            ]
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "en"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_screen_name": null,
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": null,
+        "created_at": "Wed Dec 10 21:35:19 +0000 2014",
+        "id_str": "542794715876569088",
+        "source": "<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">Hootsuite</a>",
+        "possibly_sensitive": false,
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "Tweets about nursery news and useful product information for nurseries and their staff!\r\nQuestions about our mag? Just ask!",
+            "id": 2162643788,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 1263,
+            "verified": false,
+            "profile_background_color": "FFF04D",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {
+                    "urls": [
+                        {
+                            "expanded_url": "http://www.qanursery.co.uk",
+                            "indices": [
+                                0,
+                                22
+                            ],
+                            "display_url": "qanursery.co.uk",
+                            "url": "http://t.co/aDBWL7FnJL"
+                        }
+                    ]
+                }
+            },
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000167499013/rC1NCxdn.jpeg",
+            "created_at": "Tue Oct 29 11:12:42 +0000 2013",
+            "profile_sidebar_fill_color": "F6FFD1",
+            "geo_enabled": false,
+            "statuses_count": 9440,
+            "time_zone": "Casablanca",
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000167499013/rC1NCxdn.jpeg",
+            "profile_sidebar_border_color": "FFFFFF",
+            "screen_name": "QANursery",
+            "profile_text_color": "333333",
+            "protected": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/2162643788/1389626935",
+            "id_str": "2162643788",
+            "profile_use_background_image": true,
+            "listed_count": 7,
+            "favourites_count": 32,
+            "url": "http://t.co/aDBWL7FnJL",
+            "name": "QA Nursery",
+            "friends_count": 1011,
+            "default_profile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/378800000664867879/df02d9afc5e38618c33fa3454bee0664_normal.png",
+            "profile_link_color": "0099CC",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000664867879/df02d9afc5e38618c33fa3454bee0664_normal.png",
+            "is_translator": false,
+            "utc_offset": 0,
+            "following": false,
+            "profile_background_tile": true,
+            "location": "Chorley, Lancashire",
+            "lang": "en-gb"
+        },
+        "text": "Will primary schools replace #French with #Java, C++ or #Python? http://t.co/ocKIQLVMum",
+        "lang": "en",
+        "in_reply_to_user_id_str": null
+    },
+    {
+        "id": 542794653440151552,
+        "truncated": false,
+        "entities": {
+            "urls": [
+                {
+                    "expanded_url": "http://fb.me/3QFj7ep4N",
+                    "indices": [
+                        95,
+                        117
+                    ],
+                    "display_url": "fb.me/3QFj7ep4N",
+                    "url": "http://t.co/y9YPTNVVz0"
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [],
+            "hashtags": []
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "en"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_screen_name": null,
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": null,
+        "created_at": "Wed Dec 10 21:35:04 +0000 2014",
+        "id_str": "542794653440151552",
+        "source": "<a href=\"http://www.facebook.com/twitter\" rel=\"nofollow\">Facebook</a>",
+        "possibly_sensitive": false,
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "#ballywood #Hot_shot #pweetie_rush .Many of my TWEETS here are Adverts, so....My Linked tweets doesn't define Me.\u00a4 Follow Me & I'll Follow Back \u00a4",
+            "id": 328258871,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 1645,
+            "verified": false,
+            "profile_background_color": "C0DEED",
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "created_at": "Sun Jul 03 01:36:26 +0000 2011",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "geo_enabled": true,
+            "statuses_count": 239341,
+            "time_zone": "Amsterdam",
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_sidebar_border_color": "C0DEED",
+            "screen_name": "opydoc",
+            "profile_text_color": "333333",
+            "protected": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/328258871/1395809238",
+            "id_str": "328258871",
+            "profile_use_background_image": true,
+            "listed_count": 19,
+            "favourites_count": 175,
+            "url": null,
+            "name": "\u00b0Erotic_Tweetz\u2122\u00b0\u2022",
+            "friends_count": 736,
+            "default_profile": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/457437747146674176/kTm1W2mp_normal.jpeg",
+            "profile_link_color": "0084B4",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/457437747146674176/kTm1W2mp_normal.jpeg",
+            "is_translator": false,
+            "utc_offset": 3600,
+            "following": false,
+            "profile_background_tile": false,
+            "location": "Nigeria",
+            "lang": "en"
+        },
+        "text": "SHOCKING! See The Cambodian Boy Who Sleeps with A 16ft Python [PHOTOS]\n&gt;&gt;&gt;&gt;&gt;... http://t.co/y9YPTNVVz0",
+        "lang": "en",
+        "in_reply_to_user_id_str": null
+    },
+    {
+        "id": 542794637006897153,
+        "truncated": false,
+        "entities": {
+            "urls": [
+                {
+                    "expanded_url": "http://bit.ly/1AgNzzZ",
+                    "indices": [
+                        85,
+                        107
+                    ],
+                    "display_url": "bit.ly/1AgNzzZ",
+                    "url": "http://t.co/XV5RSjSk2Y"
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [],
+            "hashtags": []
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "en"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_screen_name": null,
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": null,
+        "created_at": "Wed Dec 10 21:35:00 +0000 2014",
+        "id_str": "542794637006897153",
+        "source": "<a href=\"https://twitter.com/pypi_updates\" rel=\"nofollow\">PyPI Recent Updates Bot</a>",
+        "possibly_sensitive": false,
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "Unofficial bot to flow PyPI recent updates.",
+            "id": 2842108694,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 77,
+            "verified": false,
+            "profile_background_color": "1A1B1F",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {
+                    "urls": [
+                        {
+                            "expanded_url": "https://github.com/tell-k/pypi-updates-bot",
+                            "indices": [
+                                0,
+                                23
+                            ],
+                            "display_url": "github.com/tell-k/pypi-up\u2026",
+                            "url": "https://t.co/zelavD10qE"
+                        }
+                    ]
+                }
+            },
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme9/bg.gif",
+            "created_at": "Mon Oct 06 07:55:44 +0000 2014",
+            "profile_sidebar_fill_color": "252429",
+            "geo_enabled": false,
+            "statuses_count": 23654,
+            "time_zone": "Tokyo",
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme9/bg.gif",
+            "profile_sidebar_border_color": "181A1E",
+            "screen_name": "pypi_updates",
+            "profile_text_color": "666666",
+            "protected": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/2842108694/1412694286",
+            "id_str": "2842108694",
+            "profile_use_background_image": true,
+            "listed_count": 8,
+            "favourites_count": 2,
+            "url": "https://t.co/zelavD10qE",
+            "name": "PyPI Recent Updates",
+            "friends_count": 0,
+            "default_profile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/519502406711660545/-NxCjP2O_normal.png",
+            "profile_link_color": "2FC2EF",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/519502406711660545/-NxCjP2O_normal.png",
+            "is_translator": false,
+            "utc_offset": 32400,
+            "following": false,
+            "profile_background_tile": false,
+            "location": "",
+            "lang": "ja"
+        },
+        "text": "django-nocaptcha-recaptcha 0.0.12: Django nocaptcha recaptcha form field/widget app. http://t.co/XV5RSjSk2Y",
+        "lang": "en",
+        "in_reply_to_user_id_str": null
+    },
+    {
+        "id": 542794632338235393,
+        "truncated": false,
+        "entities": {
+            "urls": [],
+            "symbols": [],
+            "user_mentions": [],
+            "media": [
+                {
+                    "media_url_https": "https://pbs.twimg.com/media/BFh7j4BCUAANmfy.jpg",
+                    "id": 313136030364618752,
+                    "display_url": "pic.twitter.com/XFgm1P616K",
+                    "id_str": "313136030364618752",
+                    "source_status_id_str": "313136030360424449",
+                    "url": "http://t.co/XFgm1P616K",
+                    "media_url": "http://pbs.twimg.com/media/BFh7j4BCUAANmfy.jpg",
+                    "expanded_url": "http://twitter.com/python_python/status/313136030360424449/photo/1",
+                    "indices": [
+                        5,
+                        27
+                    ],
+                    "source_status_id": 313136030360424449,
+                    "type": "photo",
+                    "sizes": {
+                        "medium": {
+                            "w": 600,
+                            "resize": "fit",
+                            "h": 803
+                        },
+                        "large": {
+                            "w": 1024,
+                            "resize": "fit",
+                            "h": 1371
+                        },
+                        "small": {
+                            "w": 340,
+                            "resize": "fit",
+                            "h": 455
+                        },
+                        "thumb": {
+                            "w": 150,
+                            "resize": "crop",
+                            "h": 150
+                        }
+                    }
+                }
+            ],
+            "hashtags": []
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "ja"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_screen_name": null,
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": null,
+        "created_at": "Wed Dec 10 21:34:59 +0000 2014",
+        "id_str": "542794632338235393",
+        "source": "<a href=\"https://twitter.com/python_python\" rel=\"nofollow\">\u3071\u3044\u305d\u3093bot</a>",
+        "possibly_sensitive": false,
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "\uff08\u6700\u65b0\u66f4\u65b014/5/11\uff09\u3075\u3057\u304e\u306a\u3075\u3057\u304e\u306a\u67b6\u7a7a\u306e\u30d8\u30d3\u3001\u30d1\u30a4\u30bd\u30f3\u3002\u6700\u5927\u306f20m\u3002\u5927\u578b\u7a2e\u3002\u77e5\u80fd\u304c\u9ad8\u3044\u305f\u3081\u98fc\u80b2\u65bd\u8a2d\u306f\u53b3\u91cd\u306a\u65bd\u8a2d\u3067\u304a\u53d6\u308a\u6271\u3044\u306b\u6ce8\u610f\u3057\u3066\u304f\u3060\u3055\u3044\u3002\u4e0d\u5b9a\u671f\u66f4\u65b0\u3002\u30d5\u30a9\u30ed\u30fc\u3067\u304a\u8fce\u3048\u3002\u30ea\u30e0\u30fc\u30d6or\u30d6\u30ed\u30c3\u30af\u3067\u304a\u5225\u308c\u3002\u304b\u308f\u3044\u3044\u3088\u3002\u6c17\u8efd\u306b\u7d61\u3093\u3067\u304f\u3060\u3055\u3044\u3002",
+            "id": 1273854745,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 46,
+            "verified": false,
+            "profile_background_color": "FFFFFF",
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/816605143/82b72567e01fa4e3d357db64b539c465.jpeg",
+            "created_at": "Sun Mar 17 02:39:47 +0000 2013",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "geo_enabled": false,
+            "statuses_count": 20746,
+            "time_zone": "Irkutsk",
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/816605143/82b72567e01fa4e3d357db64b539c465.jpeg",
+            "profile_sidebar_border_color": "FFFFFF",
+            "screen_name": "python_python",
+            "profile_text_color": "333333",
+            "protected": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/1273854745/1399816107",
+            "id_str": "1273854745",
+            "profile_use_background_image": true,
+            "listed_count": 1,
+            "favourites_count": 4,
+            "url": null,
+            "name": "\u3071\u3044\u305d\u3093bot",
+            "friends_count": 55,
+            "default_profile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/465898813568217088/UEnnOD_9_normal.jpeg",
+            "profile_link_color": "00E6AD",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/465898813568217088/UEnnOD_9_normal.jpeg",
+            "is_translator": false,
+            "utc_offset": 32400,
+            "following": false,
+            "profile_background_tile": true,
+            "location": "\u30a6\u30ac\u30f3\u30c0",
+            "lang": "ja"
+        },
+        "text": "\u30ad\u30e9\u30c3\u2606 http://t.co/XFgm1P616K",
+        "lang": "ja",
+        "in_reply_to_user_id_str": null
+    },
+    {
+        "id": 542794483809931264,
+        "truncated": false,
+        "entities": {
+            "urls": [
+                {
+                    "expanded_url": "http://ow.ly/FHaWJ",
+                    "indices": [
+                        101,
+                        123
+                    ],
+                    "display_url": "ow.ly/FHaWJ",
+                    "url": "http://t.co/IE6RE973Tv"
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "id_str": "17130131",
+                    "screen_name": "javiercuervo",
+                    "id": 17130131,
+                    "indices": [
+                        87,
+                        100
+                    ],
+                    "name": "Javier Cuervo"
+                }
+            ],
+            "hashtags": [
+                {
+                    "text": "Phython",
+                    "indices": [
+                        73,
+                        81
+                    ]
+                }
+            ]
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "es"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_screen_name": null,
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": null,
+        "created_at": "Wed Dec 10 21:34:24 +0000 2014",
+        "id_str": "542794483809931264",
+        "source": "<a href=\"http://www.hootsuite.com\" rel=\"nofollow\">Hootsuite</a>",
+        "possibly_sensitive": false,
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "Disfrutando de internet, dise\u00f1ando y escribiendo. #STEM Code & robotics http://t.co/40BW7gbhnG http://t.co/U3ES2EAfHs",
+            "id": 19390070,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 1187,
+            "verified": false,
+            "profile_background_color": "EDECE9",
+            "entities": {
+                "description": {
+                    "urls": [
+                        {
+                            "expanded_url": "http://tierradecerveza.com",
+                            "indices": [
+                                72,
+                                94
+                            ],
+                            "display_url": "tierradecerveza.com",
+                            "url": "http://t.co/40BW7gbhnG"
+                        },
+                        {
+                            "expanded_url": "http://madreyminimalista.com",
+                            "indices": [
+                                95,
+                                117
+                            ],
+                            "display_url": "madreyminimalista.com",
+                            "url": "http://t.co/U3ES2EAfHs"
+                        }
+                    ]
+                },
+                "url": {
+                    "urls": [
+                        {
+                            "expanded_url": "http://trebool.com",
+                            "indices": [
+                                0,
+                                22
+                            ],
+                            "display_url": "trebool.com",
+                            "url": "http://t.co/xdrlxNYFId"
+                        }
+                    ]
+                }
+            },
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/149410478/CIMG5620.JPG",
+            "created_at": "Fri Jan 23 11:09:14 +0000 2009",
+            "profile_sidebar_fill_color": "E3E2DE",
+            "geo_enabled": true,
+            "statuses_count": 8471,
+            "time_zone": "Madrid",
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/149410478/CIMG5620.JPG",
+            "profile_sidebar_border_color": "FFFFFF",
+            "screen_name": "trebool",
+            "profile_text_color": "634047",
+            "protected": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/19390070/1414434808",
+            "id_str": "19390070",
+            "profile_use_background_image": true,
+            "listed_count": 78,
+            "favourites_count": 184,
+            "url": "http://t.co/xdrlxNYFId",
+            "name": "Carmen Bartolome ",
+            "friends_count": 670,
+            "default_profile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/2182566300/carmen_perfil1_normal.jpg",
+            "profile_link_color": "088253",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/2182566300/carmen_perfil1_normal.jpg",
+            "is_translator": false,
+            "utc_offset": 3600,
+            "following": false,
+            "profile_background_tile": false,
+            "location": "Toledo",
+            "lang": "en"
+        },
+        "text": "Muy motivador: \u00bfPor qu\u00e9 debes aprender a programar? Y adem\u00e1s empezar por #Phython, por @javiercuervo http://t.co/IE6RE973Tv",
+        "lang": "es",
+        "in_reply_to_user_id_str": null
+    },
+    {
+        "id": 542794462414790656,
+        "truncated": false,
+        "entities": {
+            "urls": [
+                {
+                    "expanded_url": "http://bit.ly/1ysugnI",
+                    "indices": [
+                        106,
+                        128
+                    ],
+                    "display_url": "bit.ly/1ysugnI",
+                    "url": "http://t.co/ZAXRKRjEkp"
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [],
+            "hashtags": []
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "en"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_screen_name": null,
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": null,
+        "created_at": "Wed Dec 10 21:34:19 +0000 2014",
+        "id_str": "542794462414790656",
+        "source": "<a href=\"http://monsterindia.com\" rel=\"nofollow\">IT jobs, India</a>",
+        "possibly_sensitive": false,
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "Get latest job opportunities in Indian IT industry",
+            "id": 123537533,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 1281,
+            "verified": false,
+            "profile_background_color": "C0DEED",
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/88067227/IT1.jpg",
+            "created_at": "Tue Mar 16 11:48:44 +0000 2010",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "geo_enabled": false,
+            "statuses_count": 68934,
+            "time_zone": null,
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/88067227/IT1.jpg",
+            "profile_sidebar_border_color": "C0DEED",
+            "screen_name": "tech_career",
+            "profile_text_color": "333333",
+            "protected": false,
+            "id_str": "123537533",
+            "profile_use_background_image": true,
+            "listed_count": 44,
+            "favourites_count": 0,
+            "url": null,
+            "name": "IT Jobs, India",
+            "friends_count": 0,
+            "default_profile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/790482269/sm_it1_normal.jpg",
+            "profile_link_color": "0084B4",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/790482269/sm_it1_normal.jpg",
+            "is_translator": false,
+            "utc_offset": null,
+            "following": false,
+            "profile_background_tile": false,
+            "location": "India",
+            "lang": "en"
+        },
+        "text": "Support Engineer, Other - India, 0 - 10 Year Exp,Lawyer/ Attorney , database,Python,JVM,Linux,Java,Apache http://t.co/ZAXRKRjEkp",
+        "lang": "en",
+        "in_reply_to_user_id_str": null
+    },
+    {
+        "id": 542794437882298368,
+        "truncated": false,
+        "entities": {
+            "urls": [
+                {
+                    "expanded_url": "https://www.paypal-engineering.com/2014/12/10/10-myths-of-enterprise-python/",
+                    "indices": [
+                        89,
+                        112
+                    ],
+                    "display_url": "paypal-engineering.com/2014/12/10/10-\u2026",
+                    "url": "https://t.co/eu4tij2mVG"
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "id_str": "154915461",
+                    "screen_name": "ramalhoorg",
+                    "id": 154915461,
+                    "indices": [
+                        3,
+                        14
+                    ],
+                    "name": "Luciano Ramalho \u2602"
+                },
+                {
+                    "id_str": "30018058",
+                    "screen_name": "PayPal",
+                    "id": 30018058,
+                    "indices": [
+                        39,
+                        46
+                    ],
+                    "name": "PayPal"
+                }
+            ],
+            "hashtags": [
+                {
+                    "text": "python",
+                    "indices": [
+                        54,
+                        61
+                    ]
+                }
+            ]
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "en"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "retweeted_status": {
+            "id": 542782054875037698,
+            "truncated": false,
+            "entities": {
+                "urls": [
+                    {
+                        "expanded_url": "https://www.paypal-engineering.com/2014/12/10/10-myths-of-enterprise-python/",
+                        "indices": [
+                            73,
+                            96
+                        ],
+                        "display_url": "paypal-engineering.com/2014/12/10/10-\u2026",
+                        "url": "https://t.co/eu4tij2mVG"
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "id_str": "30018058",
+                        "screen_name": "PayPal",
+                        "id": 30018058,
+                        "indices": [
+                            23,
+                            30
+                        ],
+                        "name": "PayPal"
+                    }
+                ],
+                "hashtags": [
+                    {
+                        "text": "python",
+                        "indices": [
+                            38,
+                            45
+                        ]
+                    }
+                ]
+            },
+            "metadata": {
+                "result_type": "recent",
+                "iso_language_code": "en"
+            },
+            "place": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_screen_name": null,
+            "favorited": false,
+            "in_reply_to_status_id_str": null,
+            "contributors": null,
+            "retweet_count": 17,
+            "geo": null,
+            "retweeted": false,
+            "in_reply_to_user_id": null,
+            "created_at": "Wed Dec 10 20:45:00 +0000 2014",
+            "id_str": "542782054875037698",
+            "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+            "possibly_sensitive": false,
+            "coordinates": null,
+            "favorite_count": 5,
+            "user": {
+                "profile_location": null,
+                "default_profile_image": false,
+                "description": "Stand-up programmer \u2022 Writing @FluentPython",
+                "id": 154915461,
+                "follow_request_sent": false,
+                "notifications": false,
+                "followers_count": 1799,
+                "verified": false,
+                "profile_background_color": "C0DEED",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {
+                        "urls": [
+                            {
+                                "expanded_url": "http://python.pro.br",
+                                "indices": [
+                                    0,
+                                    22
+                                ],
+                                "display_url": "python.pro.br",
+                                "url": "http://t.co/f5UG0qnQIJ"
+                            }
+                        ]
+                    }
+                },
+                "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                "created_at": "Sat Jun 12 15:35:08 +0000 2010",
+                "profile_sidebar_fill_color": "DDEEF6",
+                "geo_enabled": true,
+                "statuses_count": 1856,
+                "time_zone": null,
+                "contributors_enabled": false,
+                "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+                "profile_sidebar_border_color": "C0DEED",
+                "screen_name": "ramalhoorg",
+                "profile_text_color": "333333",
+                "protected": false,
+                "id_str": "154915461",
+                "profile_use_background_image": true,
+                "listed_count": 99,
+                "favourites_count": 1887,
+                "url": "http://t.co/f5UG0qnQIJ",
+                "name": "Luciano Ramalho \u2602",
+                "friends_count": 354,
+                "default_profile": true,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/1965442221/lr-stanford-wider_normal.jpg",
+                "profile_link_color": "0084B4",
+                "is_translation_enabled": false,
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/1965442221/lr-stanford-wider_normal.jpg",
+                "is_translator": false,
+                "utc_offset": null,
+                "following": false,
+                "profile_background_tile": false,
+                "location": "Sao Paulo, Brazil",
+                "lang": "en"
+            },
+            "text": "This is excellent: why @paypal trusts #python for mission-critical apps: https://t.co/eu4tij2mVG",
+            "lang": "en",
+            "in_reply_to_user_id_str": null
+        },
+        "in_reply_to_screen_name": null,
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 17,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": null,
+        "created_at": "Wed Dec 10 21:34:13 +0000 2014",
+        "id_str": "542794437882298368",
+        "source": "<a href=\"http://tapbots.com/software/tweetbot/mac\" rel=\"nofollow\">Tweetbot for Mac</a>",
+        "possibly_sensitive": false,
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "Pythonista, Djangonaut, Web Scraper. Data addict. Spiderman @ScrapingHub Organizing @betabeersvg",
+            "id": 61769849,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 792,
+            "verified": false,
+            "profile_background_color": "2D2C2E",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {
+                    "urls": [
+                        {
+                            "expanded_url": "http://juanriaza.com",
+                            "indices": [
+                                0,
+                                22
+                            ],
+                            "display_url": "juanriaza.com",
+                            "url": "http://t.co/cYoP3QF6jY"
+                        }
+                    ]
+                }
+            },
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme18/bg.gif",
+            "created_at": "Fri Jul 31 13:26:16 +0000 2009",
+            "profile_sidebar_fill_color": "F6F6F6",
+            "geo_enabled": true,
+            "statuses_count": 21505,
+            "time_zone": "Madrid",
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme18/bg.gif",
+            "profile_sidebar_border_color": "FFFFFF",
+            "screen_name": "juanriaza",
+            "profile_text_color": "333333",
+            "protected": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/61769849/1398198305",
+            "id_str": "61769849",
+            "profile_use_background_image": false,
+            "listed_count": 60,
+            "favourites_count": 8578,
+            "url": "http://t.co/cYoP3QF6jY",
+            "name": "Juan Riaza",
+            "friends_count": 269,
+            "default_profile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/378800000344604970/db805265e9e67a2abd2b5ed9ebbc4c88_normal.jpeg",
+            "profile_link_color": "038543",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000344604970/db805265e9e67a2abd2b5ed9ebbc4c88_normal.jpeg",
+            "is_translator": false,
+            "utc_offset": 3600,
+            "following": false,
+            "profile_background_tile": false,
+            "location": "Vitoria-Gasteiz (Spain)",
+            "lang": "en"
+        },
+        "text": "RT @ramalhoorg: This is excellent: why @paypal trusts #python for mission-critical apps: https://t.co/eu4tij2mVG",
+        "lang": "en",
+        "in_reply_to_user_id_str": null
+    },
+    {
+        "id": 542794349658898432,
+        "truncated": false,
+        "entities": {
+            "urls": [],
+            "symbols": [],
+            "user_mentions": [],
+            "hashtags": []
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "en"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_screen_name": null,
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": null,
+        "created_at": "Wed Dec 10 21:33:52 +0000 2014",
+        "id_str": "542794349658898432",
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "coordinates": null,
+        "favorite_count": 1,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "",
+            "id": 374874280,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 389,
+            "verified": false,
+            "profile_background_color": "C0DEED",
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "created_at": "Sat Sep 17 03:30:14 +0000 2011",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "geo_enabled": true,
+            "statuses_count": 7101,
+            "time_zone": "Central Time (US & Canada)",
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_sidebar_border_color": "C0DEED",
+            "screen_name": "J_Lainhart",
+            "profile_text_color": "333333",
+            "protected": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/374874280/1414004855",
+            "id_str": "374874280",
+            "profile_use_background_image": true,
+            "listed_count": 1,
+            "favourites_count": 1681,
+            "url": null,
+            "name": "jackson lainhart",
+            "friends_count": 153,
+            "default_profile": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/514535280448401408/1r1woi-F_normal.jpeg",
+            "profile_link_color": "0084B4",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/514535280448401408/1r1woi-F_normal.jpeg",
+            "is_translator": false,
+            "utc_offset": -21600,
+            "following": false,
+            "profile_background_tile": false,
+            "location": "[EKU]",
+            "lang": "en"
+        },
+        "text": "Yall know you can sell a scaleless Python for like 15k or something idk",
+        "lang": "en",
+        "in_reply_to_user_id_str": null
+    },
+    {
+        "id": 542794217618022400,
+        "truncated": false,
+        "entities": {
+            "urls": [
+                {
+                    "expanded_url": "http://tr.mycompas.com/staff/compas_sharejob.aspx?rID=TH8323741210&uID=16084#.VIi7Znipjjg.twitter",
+                    "indices": [
+                        85,
+                        107
+                    ],
+                    "display_url": "tr.mycompas.com/staff/compas_s\u2026",
+                    "url": "http://t.co/I5Qa0nihZ7"
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [],
+            "hashtags": [
+                {
+                    "text": "python",
+                    "indices": [
+                        10,
+                        17
+                    ]
+                },
+                {
+                    "text": "software",
+                    "indices": [
+                        18,
+                        27
+                    ]
+                },
+                {
+                    "text": "engineer",
+                    "indices": [
+                        28,
+                        37
+                    ]
+                },
+                {
+                    "text": "boston",
+                    "indices": [
+                        60,
+                        67
+                    ]
+                },
+                {
+                    "text": "jobs",
+                    "indices": [
+                        68,
+                        73
+                    ]
+                },
+                {
+                    "text": "engineer",
+                    "indices": [
+                        74,
+                        83
+                    ]
+                }
+            ]
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "en"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_screen_name": null,
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": null,
+        "created_at": "Wed Dec 10 21:33:20 +0000 2014",
+        "id_str": "542794217618022400",
+        "source": "<a href=\"https://dev.twitter.com/docs/tfw\" rel=\"nofollow\">Twitter for Websites</a>",
+        "possibly_sensitive": false,
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "Recruiting Specialist @TalentRetriever finding the best high tech talent for companies. I also play a mean bass guitar. My tweets are my thoughts.",
+            "id": 393643881,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 132,
+            "verified": false,
+            "profile_background_color": "C0DEED",
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "created_at": "Tue Oct 18 21:10:37 +0000 2011",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "geo_enabled": false,
+            "statuses_count": 869,
+            "time_zone": "Eastern Time (US & Canada)",
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_sidebar_border_color": "C0DEED",
+            "screen_name": "kpjohnson67",
+            "profile_text_color": "333333",
+            "protected": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/393643881/1398265264",
+            "id_str": "393643881",
+            "profile_use_background_image": true,
+            "listed_count": 2,
+            "favourites_count": 129,
+            "url": null,
+            "name": "Kevin Johnson",
+            "friends_count": 236,
+            "default_profile": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/378800000633452005/63a3d8c21055dfdafae32ba9d901c48f_normal.jpeg",
+            "profile_link_color": "0084B4",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000633452005/63a3d8c21055dfdafae32ba9d901c48f_normal.jpeg",
+            "is_translator": false,
+            "utc_offset": -18000,
+            "following": false,
+            "profile_background_tile": false,
+            "location": "Methuen, MA",
+            "lang": "en"
+        },
+        "text": "Are you a #python #software #engineer superstar? Talk 2 me! #boston #jobs #engineer  http://t.co/I5Qa0nihZ7",
+        "lang": "en",
+        "in_reply_to_user_id_str": null
+    },
+    {
+        "id": 542794107903836161,
+        "truncated": false,
+        "entities": {
+            "urls": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "id_str": "20733714",
+                    "screen_name": "oldjacket",
+                    "id": 20733714,
+                    "indices": [
+                        0,
+                        10
+                    ],
+                    "name": "Otis Anderson"
+                }
+            ],
+            "hashtags": []
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "en"
+        },
+        "place": null,
+        "in_reply_to_status_id": 542793500727586816,
+        "in_reply_to_screen_name": "oldjacket",
+        "favorited": false,
+        "in_reply_to_status_id_str": "542793500727586816",
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": 20733714,
+        "created_at": "Wed Dec 10 21:32:54 +0000 2014",
+        "id_str": "542794107903836161",
+        "source": "<a href=\"http://itunes.apple.com/us/app/twitter/id409789998?mt=12\" rel=\"nofollow\">Twitter for Mac</a>",
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "Software, writing, photography. Back-end development at @OmetriaData. Science and tech tweets.",
+            "id": 160199000,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 439,
+            "verified": false,
+            "profile_background_color": "C6E2EE",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {
+                    "urls": [
+                        {
+                            "expanded_url": "http://simeonvisser.com/",
+                            "indices": [
+                                0,
+                                22
+                            ],
+                            "display_url": "simeonvisser.com",
+                            "url": "http://t.co/59Qg1D8lIF"
+                        }
+                    ]
+                }
+            },
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme2/bg.gif",
+            "created_at": "Sun Jun 27 13:32:00 +0000 2010",
+            "profile_sidebar_fill_color": "DAECF4",
+            "geo_enabled": false,
+            "statuses_count": 4083,
+            "time_zone": null,
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme2/bg.gif",
+            "profile_sidebar_border_color": "C6E2EE",
+            "screen_name": "simeonvisser",
+            "profile_text_color": "663B12",
+            "protected": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/160199000/1399235922",
+            "id_str": "160199000",
+            "profile_use_background_image": true,
+            "listed_count": 17,
+            "favourites_count": 4080,
+            "url": "http://t.co/59Qg1D8lIF",
+            "name": "Simeon Visser",
+            "friends_count": 376,
+            "default_profile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/1380407544/simeon_normal.jpg",
+            "profile_link_color": "1F98C7",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/1380407544/simeon_normal.jpg",
+            "is_translator": false,
+            "utc_offset": null,
+            "following": false,
+            "profile_background_tile": false,
+            "location": "London, United Kingdom",
+            "lang": "en"
+        },
+        "text": "@oldjacket Python does do a few things better than JavaScript so I can see that.",
+        "lang": "en",
+        "in_reply_to_user_id_str": "20733714"
+    },
+    {
+        "id": 542794003629232128,
+        "truncated": false,
+        "entities": {
+            "urls": [],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "id_str": "421431976",
+                    "screen_name": "Python_00",
+                    "id": 421431976,
+                    "indices": [
+                        0,
+                        10
+                    ],
+                    "name": "Python"
+                }
+            ],
+            "hashtags": []
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "es"
+        },
+        "place": null,
+        "in_reply_to_status_id": 542793321752850432,
+        "in_reply_to_screen_name": "Python_00",
+        "favorited": false,
+        "in_reply_to_status_id_str": "542793321752850432",
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": 421431976,
+        "created_at": "Wed Dec 10 21:32:29 +0000 2014",
+        "id_str": "542794003629232128",
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "Con l'arroganza di chi ne sa.",
+            "id": 353888721,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 2238,
+            "verified": false,
+            "profile_background_color": "022330",
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/423575031/dito_cattelan2.jpg",
+            "created_at": "Fri Aug 12 20:03:57 +0000 2011",
+            "profile_sidebar_fill_color": "080808",
+            "geo_enabled": true,
+            "statuses_count": 41307,
+            "time_zone": "Rome",
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/423575031/dito_cattelan2.jpg",
+            "profile_sidebar_border_color": "000000",
+            "screen_name": "Dan_Maze",
+            "profile_text_color": "FDFFE3",
+            "protected": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/353888721/1400857543",
+            "id_str": "353888721",
+            "profile_use_background_image": true,
+            "listed_count": 26,
+            "favourites_count": 14569,
+            "url": null,
+            "name": "Mazinho",
+            "friends_count": 945,
+            "default_profile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/536670261500997632/T1l1NhRV_normal.jpeg",
+            "profile_link_color": "B81414",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/536670261500997632/T1l1NhRV_normal.jpeg",
+            "is_translator": false,
+            "utc_offset": 3600,
+            "following": false,
+            "profile_background_tile": true,
+            "location": "",
+            "lang": "it"
+        },
+        "text": "@Python_00 decollo",
+        "lang": "es",
+        "in_reply_to_user_id_str": "421431976"
+    },
+    {
+        "id": 542793995651665920,
+        "truncated": false,
+        "entities": {
+            "urls": [
+                {
+                    "expanded_url": "https://solveforall.com/docs/integrations/jetbrains",
+                    "indices": [
+                        116,
+                        139
+                    ],
+                    "display_url": "solveforall.com/docs/integrati\u2026",
+                    "url": "https://t.co/yfZoHUTd8M"
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "id_str": "19097512",
+                    "screen_name": "pivotallabs",
+                    "id": 19097512,
+                    "indices": [
+                        0,
+                        12
+                    ],
+                    "name": "Pivotal Labs"
+                }
+            ],
+            "hashtags": []
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "en"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_screen_name": "pivotallabs",
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": 19097512,
+        "created_at": "Wed Dec 10 21:32:27 +0000 2014",
+        "id_str": "542793995651665920",
+        "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+        "possibly_sensitive": false,
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "Chinese-American programmer, dad from NJ, Berkeley grad, WFH champion, creator of maplay 1.2+ for Win32, founder of Solve for All",
+            "id": 190802659,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 12,
+            "verified": false,
+            "profile_background_color": "C0DEED",
+            "entities": {
+                "description": {
+                    "urls": []
+                },
+                "url": {
+                    "urls": [
+                        {
+                            "expanded_url": "https://solveforall.com",
+                            "indices": [
+                                0,
+                                23
+                            ],
+                            "display_url": "solveforall.com",
+                            "url": "https://t.co/BNNgRL5UAT"
+                        }
+                    ]
+                }
+            },
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "created_at": "Tue Sep 14 21:45:58 +0000 2010",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "geo_enabled": false,
+            "statuses_count": 47,
+            "time_zone": "Pacific Time (US & Canada)",
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_sidebar_border_color": "C0DEED",
+            "screen_name": "solveforall",
+            "profile_text_color": "333333",
+            "protected": false,
+            "id_str": "190802659",
+            "profile_use_background_image": true,
+            "listed_count": 1,
+            "favourites_count": 2,
+            "url": "https://t.co/BNNgRL5UAT",
+            "name": "Jeff Tsay",
+            "friends_count": 36,
+            "default_profile": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/516660784022028288/UrhiLeD-_normal.png",
+            "profile_link_color": "0084B4",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/516660784022028288/UrhiLeD-_normal.png",
+            "is_translator": false,
+            "utc_offset": -28800,
+            "following": false,
+            "profile_background_tile": false,
+            "location": "San Marcos, CA",
+            "lang": "en"
+        },
+        "text": "@pivotallabs Fmr client dev here. Try this plugin for RubyMine/JetBrains IDE. Search docs of JS, Ruby, Python, JDK:\nhttps://t.co/yfZoHUTd8M",
+        "lang": "en",
+        "in_reply_to_user_id_str": "19097512"
+    },
+    {
+        "id": 542793973748989952,
+        "truncated": false,
+        "entities": {
+            "urls": [
+                {
+                    "expanded_url": "https://vine.co/v/Oi7F7PDVdzK",
+                    "indices": [
+                        91,
+                        114
+                    ],
+                    "display_url": "vine.co/v/Oi7F7PDVdzK",
+                    "url": "https://t.co/CpWCrl1DRp"
+                }
+            ],
+            "symbols": [],
+            "user_mentions": [
+                {
+                    "id_str": "328229731",
+                    "screen_name": "BorjadeDios",
+                    "id": 328229731,
+                    "indices": [
+                        3,
+                        15
+                    ],
+                    "name": "Borja de Dios"
+                },
+                {
+                    "id_str": "2888980631",
+                    "screen_name": "GH_Vines",
+                    "id": 2888980631,
+                    "indices": [
+                        18,
+                        27
+                    ],
+                    "name": "GH VINES"
+                }
+            ],
+            "hashtags": []
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "es"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "retweeted_status": {
+            "id": 542779821169061888,
+            "truncated": false,
+            "entities": {
+                "urls": [
+                    {
+                        "expanded_url": "https://vine.co/v/Oi7F7PDVdzK",
+                        "indices": [
+                            74,
+                            97
+                        ],
+                        "display_url": "vine.co/v/Oi7F7PDVdzK",
+                        "url": "https://t.co/CpWCrl1DRp"
+                    }
+                ],
+                "symbols": [],
+                "user_mentions": [
+                    {
+                        "id_str": "2888980631",
+                        "screen_name": "GH_Vines",
+                        "id": 2888980631,
+                        "indices": [
+                            1,
+                            10
+                        ],
+                        "name": "GH VINES"
+                    }
+                ],
+                "hashtags": []
+            },
+            "metadata": {
+                "result_type": "recent",
+                "iso_language_code": "es"
+            },
+            "place": null,
+            "in_reply_to_status_id": null,
+            "in_reply_to_screen_name": null,
+            "favorited": false,
+            "in_reply_to_status_id_str": null,
+            "contributors": null,
+            "retweet_count": 1,
+            "geo": null,
+            "retweeted": false,
+            "in_reply_to_user_id": null,
+            "created_at": "Wed Dec 10 20:36:08 +0000 2014",
+            "id_str": "542779821169061888",
+            "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+            "possibly_sensitive": false,
+            "coordinates": null,
+            "favorite_count": 0,
+            "user": {
+                "profile_location": null,
+                "default_profile_image": false,
+                "description": "Treat Yourself - Tecnologias Mineras, Energ\u00edas y Materiales",
+                "id": 328229731,
+                "follow_request_sent": false,
+                "notifications": false,
+                "followers_count": 397,
+                "verified": false,
+                "profile_background_color": "000000",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    }
+                },
+                "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000030218782/0f975a7522dbca823781c6a3fb1c8561.jpeg",
+                "created_at": "Sun Jul 03 00:13:38 +0000 2011",
+                "profile_sidebar_fill_color": "304775",
+                "geo_enabled": true,
+                "statuses_count": 14922,
+                "time_zone": "Athens",
+                "contributors_enabled": false,
+                "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000030218782/0f975a7522dbca823781c6a3fb1c8561.jpeg",
+                "profile_sidebar_border_color": "000000",
+                "screen_name": "BorjadeDios",
+                "profile_text_color": "0A084D",
+                "protected": false,
+                "profile_banner_url": "https://pbs.twimg.com/profile_banners/328229731/1401024085",
+                "id_str": "328229731",
+                "profile_use_background_image": true,
+                "listed_count": 0,
+                "favourites_count": 2337,
+                "url": null,
+                "name": "Borja de Dios",
+                "friends_count": 336,
+                "default_profile": false,
+                "profile_image_url": "http://pbs.twimg.com/profile_images/444601498979532801/k2oiI6WE_normal.jpeg",
+                "profile_link_color": "EDDA05",
+                "is_translation_enabled": false,
+                "profile_image_url_https": "https://pbs.twimg.com/profile_images/444601498979532801/k2oiI6WE_normal.jpeg",
+                "is_translator": false,
+                "utc_offset": 7200,
+                "following": false,
+                "profile_background_tile": true,
+                "location": "Aviles - Oviedo",
+                "lang": "es"
+            },
+            "text": "\"@GH_Vines: Cuando el profesor va repartiendo los examenes y te toca a ti https://t.co/CpWCrl1DRp\" yo con el examen de python",
+            "lang": "es",
+            "in_reply_to_user_id_str": null
+        },
+        "in_reply_to_screen_name": null,
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 1,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": null,
+        "created_at": "Wed Dec 10 21:32:22 +0000 2014",
+        "id_str": "542793973748989952",
+        "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+        "possibly_sensitive": false,
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "Escuela de Ing. de minas, energ\u00eda y materiales. {Look at the stars, look how they shine for you.} 1\u20e3\u2665\ufe0f",
+            "id": 450815842,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 343,
+            "verified": false,
+            "profile_background_color": "1674B3",
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme18/bg.gif",
+            "created_at": "Fri Dec 30 17:58:26 +0000 2011",
+            "profile_sidebar_fill_color": "F6F6F6",
+            "geo_enabled": false,
+            "statuses_count": 7212,
+            "time_zone": "Amsterdam",
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme18/bg.gif",
+            "profile_sidebar_border_color": "FFFFFF",
+            "screen_name": "EvaM_9",
+            "profile_text_color": "333333",
+            "protected": false,
+            "profile_banner_url": "https://pbs.twimg.com/profile_banners/450815842/1414342578",
+            "id_str": "450815842",
+            "profile_use_background_image": true,
+            "listed_count": 3,
+            "favourites_count": 1425,
+            "url": null,
+            "name": "Eva Montes",
+            "friends_count": 442,
+            "default_profile": false,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/530428826409762816/0HoQr2Hv_normal.jpeg",
+            "profile_link_color": "EB7BAD",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/530428826409762816/0HoQr2Hv_normal.jpeg",
+            "is_translator": false,
+            "utc_offset": 3600,
+            "following": false,
+            "profile_background_tile": false,
+            "location": "Langreo, Asturias",
+            "lang": "es"
+        },
+        "text": "RT @BorjadeDios: \"@GH_Vines: Cuando el profesor va repartiendo los examenes y te toca a ti https://t.co/CpWCrl1DRp\" yo con el examen de pyt\u2026",
+        "lang": "es",
+        "in_reply_to_user_id_str": null
+    },
+    {
+        "id": 542793899191070720,
+        "truncated": false,
+        "entities": {
+            "urls": [],
+            "symbols": [],
+            "user_mentions": [],
+            "hashtags": []
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "ru"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_screen_name": null,
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": null,
+        "created_at": "Wed Dec 10 21:32:04 +0000 2014",
+        "id_str": "542793899191070720",
+        "source": "<a href=\"http://ifttt.com\" rel=\"nofollow\">IFTTT</a>",
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "",
+            "id": 1250755855,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 5,
+            "verified": false,
+            "profile_background_color": "C0DEED",
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "created_at": "Fri Mar 08 04:42:13 +0000 2013",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "geo_enabled": false,
+            "statuses_count": 2183,
+            "time_zone": null,
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_sidebar_border_color": "C0DEED",
+            "screen_name": "AriannaSuarez8",
+            "profile_text_color": "333333",
+            "protected": false,
+            "id_str": "1250755855",
+            "profile_use_background_image": true,
+            "listed_count": 0,
+            "favourites_count": 0,
+            "url": null,
+            "name": "AriannaSuarez",
+            "friends_count": 9,
+            "default_profile": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/3601653684/f1d4e525bb300679ed30f39df7d228f2_normal.jpeg",
+            "profile_link_color": "0084B4",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/3601653684/f1d4e525bb300679ed30f39df7d228f2_normal.jpeg",
+            "is_translator": false,
+            "utc_offset": null,
+            "following": false,
+            "profile_background_tile": false,
+            "location": "",
+            "lang": "ru"
+        },
+        "text": "\u0412\u0432\u0435\u0434\u0435\u043d\u0438\u0435 \u0432 Python \u0441 PyCharm-\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0435 \u0438\u0437\u0434\u0430\u043d\u0438\u0435 \u043f\u0435\u0440\u0435\u0432\u043e\u0434",
+        "lang": "ru",
+        "in_reply_to_user_id_str": null
+    },
+    {
+        "id": 542793891804905473,
+        "truncated": false,
+        "entities": {
+            "urls": [],
+            "symbols": [],
+            "user_mentions": [],
+            "hashtags": []
+        },
+        "metadata": {
+            "result_type": "recent",
+            "iso_language_code": "ru"
+        },
+        "place": null,
+        "in_reply_to_status_id": null,
+        "in_reply_to_screen_name": null,
+        "favorited": false,
+        "in_reply_to_status_id_str": null,
+        "contributors": null,
+        "retweet_count": 0,
+        "geo": null,
+        "retweeted": false,
+        "in_reply_to_user_id": null,
+        "created_at": "Wed Dec 10 21:32:03 +0000 2014",
+        "id_str": "542793891804905473",
+        "source": "<a href=\"http://ifttt.com\" rel=\"nofollow\">IFTTT</a>",
+        "coordinates": null,
+        "favorite_count": 0,
+        "user": {
+            "profile_location": null,
+            "default_profile_image": false,
+            "description": "",
+            "id": 1258725138,
+            "follow_request_sent": false,
+            "notifications": false,
+            "followers_count": 5,
+            "verified": false,
+            "profile_background_color": "C0DEED",
+            "entities": {
+                "description": {
+                    "urls": []
+                }
+            },
+            "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+            "created_at": "Mon Mar 11 06:25:09 +0000 2013",
+            "profile_sidebar_fill_color": "DDEEF6",
+            "geo_enabled": false,
+            "statuses_count": 2146,
+            "time_zone": null,
+            "contributors_enabled": false,
+            "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+            "profile_sidebar_border_color": "C0DEED",
+            "screen_name": "OquendoRoslyn",
+            "profile_text_color": "333333",
+            "protected": false,
+            "id_str": "1258725138",
+            "profile_use_background_image": true,
+            "listed_count": 0,
+            "favourites_count": 0,
+            "url": null,
+            "name": "OquendoRoslyn",
+            "friends_count": 3,
+            "default_profile": true,
+            "profile_image_url": "http://pbs.twimg.com/profile_images/3585712336/423bf483dae4e101a4792405f52d8ffb_normal.jpeg",
+            "profile_link_color": "0084B4",
+            "is_translation_enabled": false,
+            "profile_image_url_https": "https://pbs.twimg.com/profile_images/3585712336/423bf483dae4e101a4792405f52d8ffb_normal.jpeg",
+            "is_translator": false,
+            "utc_offset": null,
+            "following": false,
+            "profile_background_tile": false,
+            "location": "",
+            "lang": "en"
+        },
+        "text": "\u0412\u0432\u0435\u0434\u0435\u043d\u0438\u0435 \u0432 Python \u0441 PyCharm-\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0435 \u0438\u0437\u0434\u0430\u043d\u0438\u0435 \u043f\u0435\u0440\u0435\u0432\u043e\u0434",
+        "lang": "ru",
+        "in_reply_to_user_id_str": null
+    }
+]
