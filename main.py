@@ -1,9 +1,16 @@
 from twitter import TwitterUser
 from twitter import TwitterRequest
 from twitter import TwitterOutput
-from tkinter import *
+from tkinter import Frame
+from tkinter import Entry
+from tkinter import Label
 from tkinter import messagebox
 from tkinter import filedialog
+from tkinter import Button
+from tkinter import StringVar
+from tkinter import OptionMenu
+from tkinter import Toplevel
+from tkinter import Tk
 import webbrowser
 import os
 
